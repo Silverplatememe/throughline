@@ -1,0 +1,4063 @@
+{
+ "company": "Lovable",
+ "generated": "02 Sep 2026",
+ "headline": "Subscription and credit pricing transparency is the single largest fixable drag on the rating.",
+ "sources": [
+  {
+   "id": "all",
+   "label": "All Sources",
+   "short": "All"
+  },
+  {
+   "id": "google_play",
+   "label": "Google Play",
+   "short": "Google Play"
+  },
+  {
+   "id": "app_store",
+   "label": "App Store",
+   "short": "App Store"
+  }
+ ],
+ "scopes": {
+  "all": {
+   "kpis": {
+    "avgRating": 4.39,
+    "nss": 43.1,
+    "nReviews": 80,
+    "nPhrases": 153,
+    "agreement": 0.67,
+    "agreementN": 80
+   },
+   "themes": [
+    {
+     "theme": "App stability and performance",
+     "summary": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures.",
+     "action": "Prioritize fixing crash and freeze bugs, especially those that consume user credits during failures.",
+     "confidence": "high",
+     "volume": 8,
+     "sentiment": -0.239,
+     "impact": -0.223,
+     "impactReliable": true,
+     "impactRatedN": 8,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.489,
+      0.011
+     ],
+     "nSentences": 22,
+     "verbatimIds": [
+      34,
+      51,
+      54,
+      58,
+      67,
+      70,
+      71,
+      74
+     ],
+     "distribution": {
+      "positive": 6,
+      "negative": 14,
+      "neutral": 2
+     },
+     "priority": "Investigate",
+     "sourceConcentration": {
+      "source": "app_store",
+      "label": "App Store",
+      "count": 8,
+      "total": 8
+     }
+    },
+    {
+     "theme": "Credits, pricing and subscription plans",
+     "summary": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans.",
+     "action": "Improve transparency around credit costs and subscription terms, and simplify the cancellation process.",
+     "confidence": "high",
+     "volume": 13,
+     "sentiment": -0.249,
+     "impact": -0.209,
+     "impactReliable": true,
+     "impactRatedN": 13,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.42,
+      -0.077
+     ],
+     "nSentences": 35,
+     "verbatimIds": [
+      12,
+      21,
+      22,
+      26,
+      32,
+      34,
+      39,
+      49,
+      60,
+      61,
+      63,
+      66,
+      73
+     ],
+     "distribution": {
+      "positive": 7,
+      "negative": 19,
+      "neutral": 9
+     },
+     "priority": "Investigate",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "AI-powered website/app building capability",
+     "summary": "Users describe how well Lovable turns ideas into working websites and apps, praising speed, ease of use, and output quality, with some noting inconsistent results or bugs it introduces.",
+     "action": "Invest in improving consistency of AI-generated output and reduce the number of iterations needed to get accurate results.",
+     "confidence": "high",
+     "volume": 27,
+     "sentiment": 0.59,
+     "impact": 0.275,
+     "impactReliable": true,
+     "impactRatedN": 27,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      0.493,
+      0.687
+     ],
+     "nSentences": 67,
+     "verbatimIds": [
+      12,
+      14,
+      15,
+      19,
+      21,
+      26,
+      30,
+      31,
+      35,
+      36,
+      39,
+      40,
+      41,
+      43,
+      45,
+      50,
+      55,
+      57,
+      59,
+      60,
+      62,
+      63,
+      65,
+      68,
+      76,
+      79,
+      80
+     ],
+     "distribution": {
+      "positive": 53,
+      "negative": 2,
+      "neutral": 12
+     },
+     "priority": "Protect",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Overall app experience",
+     "summary": "Many users give brief, general praise or criticism about the app without referencing a specific feature, ranging from 'love it' and 'best app' to 'worst' and 'didn't work'.",
+     "action": "Continue monitoring general sentiment trends over time as a health metric, but rely on feature-specific topics for actionable product changes.",
+     "confidence": "high",
+     "volume": 34,
+     "sentiment": 0.612,
+     "impact": 0.301,
+     "impactReliable": true,
+     "impactRatedN": 34,
+     "significant": true,
+     "effect": "medium",
+     "ci95": [
+      0.51,
+      0.714
+     ],
+     "nSentences": 42,
+     "verbatimIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      16,
+      18,
+      20,
+      23,
+      24,
+      25,
+      27,
+      28,
+      33,
+      36,
+      42,
+      44,
+      46,
+      47,
+      48,
+      52,
+      53,
+      64,
+      69,
+      75,
+      77,
+      78
+     ],
+     "distribution": {
+      "positive": 37,
+      "negative": 1,
+      "neutral": 4
+     },
+     "priority": "Protect",
+     "sourceConcentration": {
+      "source": "google_play",
+      "label": "Google Play",
+      "count": 20,
+      "total": 34
+     }
+    },
+    {
+     "theme": "Login and account access",
+     "summary": "A few users report being unable to log in or get past the home screen, including errors when signing in with Google.",
+     "action": "Investigate and resolve authentication error codes and Google sign-in flow issues.",
+     "confidence": "medium",
+     "volume": 2,
+     "sentiment": -0.55,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 2,
+     "significant": null,
+     "effect": null,
+     "ci95": null,
+     "nSentences": 2,
+     "verbatimIds": [
+      17,
+      56
+     ],
+     "distribution": {
+      "positive": 0,
+      "negative": 2,
+      "neutral": 0
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "AI autonomy and unwanted changes",
+     "summary": "Some users are frustrated that the AI makes unrequested project changes or continues actions after being told to stop, leading to wasted credits and a feeling of being overridden.",
+     "action": "Add stronger user controls to halt AI actions immediately and prevent unsolicited modifications to projects.",
+     "confidence": "medium",
+     "volume": 3,
+     "sentiment": -0.36,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 3,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.751,
+      0.031
+     ],
+     "nSentences": 10,
+     "verbatimIds": [
+      21,
+      49,
+      63
+     ],
+     "distribution": {
+      "positive": 1,
+      "negative": 6,
+      "neutral": 3
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Mobile app vs. website feature parity",
+     "summary": "Users note that the mobile app is convenient for working on the go but is glitchy and lacks many features available on the full website version.",
+     "action": "Align mobile app functionality and stability with the web platform to close the feature gap.",
+     "confidence": "medium",
+     "volume": 3,
+     "sentiment": -0.133,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 3,
+     "significant": false,
+     "effect": "large",
+     "ci95": [
+      -0.653,
+      0.387
+     ],
+     "nSentences": 9,
+     "verbatimIds": [
+      71,
+      72,
+      74
+     ],
+     "distribution": {
+      "positive": 4,
+      "negative": 5,
+      "neutral": 0
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    }
+   ],
+   "emotions": [
+    {
+     "label": "delight",
+     "count": 82,
+     "pct": 53.6,
+     "valence": "pos"
+    },
+    {
+     "label": "frustration",
+     "count": 26,
+     "pct": 17.0,
+     "valence": "neg"
+    },
+    {
+     "label": "trust",
+     "count": 12,
+     "pct": 7.8,
+     "valence": "pos"
+    },
+    {
+     "label": "indifference",
+     "count": 11,
+     "pct": 7.2,
+     "valence": "neu"
+    },
+    {
+     "label": "anger",
+     "count": 8,
+     "pct": 5.2,
+     "valence": "neg"
+    },
+    {
+     "label": "disappointment",
+     "count": 6,
+     "pct": 3.9,
+     "valence": "neg"
+    },
+    {
+     "label": "relief",
+     "count": 5,
+     "pct": 3.3,
+     "valence": "pos"
+    },
+    {
+     "label": "anxiety",
+     "count": 2,
+     "pct": 1.3,
+     "valence": "neg"
+    },
+    {
+     "label": "confusion",
+     "count": 1,
+     "pct": 0.7,
+     "valence": "neg"
+    }
+   ],
+   "valenceSplit": {
+    "pos": 64.7,
+    "neu": 7.2,
+    "neg": 28.1
+   },
+   "scatter": [
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 1,
+     "s": -0.8
+    },
+    {
+     "r": 4,
+     "s": 0.4
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 4,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 3,
+     "s": -0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 4,
+     "s": 0.6
+    },
+    {
+     "r": 3,
+     "s": -0.033
+    },
+    {
+     "r": 5,
+     "s": -0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": -0.1
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.0
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.767
+    },
+    {
+     "r": 1,
+     "s": -0.367
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 2,
+     "s": -0.567
+    },
+    {
+     "r": 5,
+     "s": 0.744
+    },
+    {
+     "r": 5,
+     "s": 0.367
+    },
+    {
+     "r": 5,
+     "s": 0.4
+    },
+    {
+     "r": 5,
+     "s": 0.0
+    },
+    {
+     "r": 5,
+     "s": 0.3
+    },
+    {
+     "r": 5,
+     "s": 0.883
+    },
+    {
+     "r": 5,
+     "s": 0.635
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.85
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 3,
+     "s": -0.75
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 1,
+     "s": -0.6
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.525
+    },
+    {
+     "r": 4,
+     "s": 0.138
+    },
+    {
+     "r": 5,
+     "s": 0.867
+    },
+    {
+     "r": 5,
+     "s": -0.6
+    },
+    {
+     "r": 5,
+     "s": 0.75
+    },
+    {
+     "r": 3,
+     "s": -0.3
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.333
+    },
+    {
+     "r": 1,
+     "s": -0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": -0.167
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 2,
+     "s": -0.45
+    },
+    {
+     "r": 4,
+     "s": 0.1
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 2,
+     "s": -0.6
+    },
+    {
+     "r": 1,
+     "s": -0.157
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 1,
+     "s": -0.7
+    },
+    {
+     "r": 2,
+     "s": -0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    }
+   ],
+   "painPoints": [
+    {
+     "quote": "Most annoying when dealing with a subscription not only do I barely use the app anymore but when I want to cancel my subscription I have to wait 1 month so that they can keep charging my card so ANNOYING",
+     "store": "App Store",
+     "rating": 1,
+     "score": -0.8,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 13,
+     "themeImpact": -0.209,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    },
+    {
+     "quote": "Couldn’t even finish my first task before it brought a paywall up . Horrible. DO NOT RECOMMEND",
+     "store": "App Store",
+     "rating": 1,
+     "score": -0.7,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 13,
+     "themeImpact": -0.209,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    },
+    {
+     "quote": "The mobile app is glitchy, site often does not load, and it does not have even close to the features of the website.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.7,
+     "tag": "App stability and performance",
+     "themeVolume": 8,
+     "themeImpact": -0.223,
+     "whyItMatters": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures."
+    },
+    {
+     "quote": "Started using for the first time; after inputting info to build website; system loads/analyzed/asked questions and frozen; 5x straight.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.6,
+     "tag": "App stability and performance",
+     "themeVolume": 8,
+     "themeImpact": -0.223,
+     "whyItMatters": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures."
+    },
+    {
+     "quote": "This app is constantly crashing. It also utilizes credits during the crash that you ultimately lose during the process. Please initiate a fix.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.57,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 13,
+     "themeImpact": -0.209,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    }
+   ],
+   "untagged": {
+    "count": 3,
+    "pct": 3.8,
+    "meanSentiment": 0.133,
+    "examples": [
+     "YouTube Shorts Script Extractor 🎬📝",
+     "Experts in making companies visible AND making brand AI be a"
+    ]
+   },
+   "validation": {
+    "testable": true,
+    "n": 80,
+    "spearman_rho": 0.667,
+    "p_value": 0.0,
+    "interpretation": "Strong agreement with star ratings — scoring prompt looks sound."
+   },
+   "omnibus": {
+    "testable": true,
+    "test": "Kruskal-Wallis H",
+    "h_statistic": 79.69,
+    "p_value": 0.0,
+    "significant": true,
+    "interpretation": "Themes differ meaningfully in sentiment."
+   },
+   "trend": {
+    "period_days": 7,
+    "current_n": 43,
+    "previous_n": 15,
+    "undated_n": 0,
+    "current_avg": 0.353,
+    "previous_avg": 0.577,
+    "comparable": true,
+    "delta": -0.224,
+    "direction": "down"
+   }
+  },
+  "google_play": {
+   "kpis": {
+    "avgRating": 4.63,
+    "nss": 66.7,
+    "nReviews": 30,
+    "nPhrases": 33,
+    "agreement": 0.54,
+    "agreementN": 30
+   },
+   "themes": [
+    {
+     "theme": "AI-powered website/app building capability",
+     "summary": "Users describe how well Lovable turns ideas into working websites and apps, praising speed, ease of use, and output quality, with some noting inconsistent results or bugs it introduces.",
+     "action": "Invest in improving consistency of AI-generated output and reduce the number of iterations needed to get accurate results.",
+     "confidence": "high",
+     "volume": 7,
+     "sentiment": 0.389,
+     "impact": 0.024,
+     "impactReliable": true,
+     "impactRatedN": 7,
+     "significant": false,
+     "effect": "negligible",
+     "ci95": [
+      -0.079,
+      0.857
+     ],
+     "nSentences": 9,
+     "verbatimIds": [
+      12,
+      14,
+      15,
+      19,
+      21,
+      26,
+      30
+     ],
+     "distribution": {
+      "positive": 6,
+      "negative": 1,
+      "neutral": 2
+     },
+     "priority": "Monitor",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Overall app experience",
+     "summary": "Many users give brief, general praise or criticism about the app without referencing a specific feature, ranging from 'love it' and 'best app' to 'worst' and 'didn't work'.",
+     "action": "Continue monitoring general sentiment trends over time as a health metric, but rely on feature-specific topics for actionable product changes.",
+     "confidence": "high",
+     "volume": 20,
+     "sentiment": 0.595,
+     "impact": 0.033,
+     "impactReliable": true,
+     "impactRatedN": 20,
+     "significant": false,
+     "effect": "large",
+     "ci95": [
+      0.437,
+      0.754
+     ],
+     "nSentences": 21,
+     "verbatimIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      16,
+      18,
+      20,
+      23,
+      24,
+      25,
+      27,
+      28
+     ],
+     "distribution": {
+      "positive": 20,
+      "negative": 1,
+      "neutral": 0
+     },
+     "priority": "Monitor",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Credits, pricing and subscription plans",
+     "summary": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans.",
+     "action": "Improve transparency around credit costs and subscription terms, and simplify the cancellation process.",
+     "confidence": "high",
+     "volume": 4,
+     "sentiment": -0.033,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 4,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.696,
+      0.629
+     ],
+     "nSentences": 6,
+     "verbatimIds": [
+      12,
+      21,
+      22,
+      26
+     ],
+     "distribution": {
+      "positive": 2,
+      "negative": 2,
+      "neutral": 2
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Login and account access",
+     "summary": "A few users report being unable to log in or get past the home screen, including errors when signing in with Google.",
+     "action": "Investigate and resolve authentication error codes and Google sign-in flow issues.",
+     "confidence": "medium",
+     "volume": 1,
+     "sentiment": -0.5,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 1,
+     "significant": null,
+     "effect": null,
+     "ci95": null,
+     "nSentences": 1,
+     "verbatimIds": [
+      17
+     ],
+     "distribution": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 0
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "AI autonomy and unwanted changes",
+     "summary": "Some users are frustrated that the AI makes unrequested project changes or continues actions after being told to stop, leading to wasted credits and a feeling of being overridden.",
+     "action": "Add stronger user controls to halt AI actions immediately and prevent unsolicited modifications to projects.",
+     "confidence": "medium",
+     "volume": 1,
+     "sentiment": -0.033,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 1,
+     "significant": null,
+     "effect": null,
+     "ci95": null,
+     "nSentences": 3,
+     "verbatimIds": [
+      21
+     ],
+     "distribution": {
+      "positive": 1,
+      "negative": 1,
+      "neutral": 1
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    }
+   ],
+   "emotions": [
+    {
+     "label": "delight",
+     "count": 25,
+     "pct": 75.8,
+     "valence": "pos"
+    },
+    {
+     "label": "frustration",
+     "count": 3,
+     "pct": 9.1,
+     "valence": "neg"
+    },
+    {
+     "label": "disappointment",
+     "count": 2,
+     "pct": 6.1,
+     "valence": "neg"
+    },
+    {
+     "label": "relief",
+     "count": 1,
+     "pct": 3.0,
+     "valence": "pos"
+    },
+    {
+     "label": "anger",
+     "count": 1,
+     "pct": 3.0,
+     "valence": "neg"
+    },
+    {
+     "label": "indifference",
+     "count": 1,
+     "pct": 3.0,
+     "valence": "neu"
+    }
+   ],
+   "valenceSplit": {
+    "pos": 78.8,
+    "neu": 3.0,
+    "neg": 18.2
+   },
+   "scatter": [
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 1,
+     "s": -0.8
+    },
+    {
+     "r": 4,
+     "s": 0.4
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 4,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 3,
+     "s": -0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 4,
+     "s": 0.6
+    },
+    {
+     "r": 3,
+     "s": -0.033
+    },
+    {
+     "r": 5,
+     "s": -0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": -0.1
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.0
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    }
+   ],
+   "painPoints": [
+    {
+     "quote": "it's a great tool but recently I can't log into my account it keeps showing this error code and that's frustrating 😞",
+     "store": "Google Play",
+     "rating": 3,
+     "score": -0.5,
+     "tag": "Login and account access",
+     "themeVolume": 1,
+     "themeImpact": null,
+     "whyItMatters": "A few users report being unable to log in or get past the home screen, including errors when signing in with Google."
+    }
+   ],
+   "untagged": {
+    "count": 1,
+    "pct": 3.3,
+    "meanSentiment": 0.0,
+    "examples": [
+     "YouTube Shorts Script Extractor 🎬📝"
+    ]
+   },
+   "validation": {
+    "testable": true,
+    "n": 30,
+    "spearman_rho": 0.541,
+    "p_value": 0.00204,
+    "interpretation": "Moderate agreement — usable but the prompt could be tightened."
+   },
+   "omnibus": {
+    "testable": true,
+    "test": "Kruskal-Wallis H",
+    "h_statistic": 3.952,
+    "p_value": 0.13864,
+    "significant": false,
+    "interpretation": "No statistically detectable difference between themes — per-theme rankings below may be noise."
+   },
+   "trend": {
+    "comparable": false,
+    "note": "Not enough data spanning two 7-day periods (33 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+   }
+  },
+  "app_store": {
+   "kpis": {
+    "avgRating": 4.24,
+    "nss": 36.7,
+    "nReviews": 50,
+    "nPhrases": 120,
+    "agreement": 0.72,
+    "agreementN": 50
+   },
+   "themes": [
+    {
+     "theme": "App stability and performance",
+     "summary": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures.",
+     "action": "Prioritize fixing crash and freeze bugs, especially those that consume user credits during failures.",
+     "confidence": "high",
+     "volume": 8,
+     "sentiment": -0.239,
+     "impact": -0.355,
+     "impactReliable": true,
+     "impactRatedN": 8,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.489,
+      0.011
+     ],
+     "nSentences": 22,
+     "verbatimIds": [
+      34,
+      51,
+      54,
+      58,
+      67,
+      70,
+      71,
+      74
+     ],
+     "distribution": {
+      "positive": 6,
+      "negative": 14,
+      "neutral": 2
+     },
+     "priority": "Fix first",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Credits, pricing and subscription plans",
+     "summary": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans.",
+     "action": "Improve transparency around credit costs and subscription terms, and simplify the cancellation process.",
+     "confidence": "high",
+     "volume": 9,
+     "sentiment": -0.293,
+     "impact": -0.321,
+     "impactReliable": true,
+     "impactRatedN": 9,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.471,
+      -0.115
+     ],
+     "nSentences": 29,
+     "verbatimIds": [
+      32,
+      34,
+      39,
+      49,
+      60,
+      61,
+      63,
+      66,
+      73
+     ],
+     "distribution": {
+      "positive": 5,
+      "negative": 17,
+      "neutral": 7
+     },
+     "priority": "Fix first",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Overall app experience",
+     "summary": "Many users give brief, general praise or criticism about the app without referencing a specific feature, ranging from 'love it' and 'best app' to 'worst' and 'didn't work'.",
+     "action": "Continue monitoring general sentiment trends over time as a health metric, but rely on feature-specific topics for actionable product changes.",
+     "confidence": "high",
+     "volume": 14,
+     "sentiment": 0.629,
+     "impact": 0.296,
+     "impactReliable": true,
+     "impactRatedN": 14,
+     "significant": true,
+     "effect": "medium",
+     "ci95": [
+      0.487,
+      0.77
+     ],
+     "nSentences": 21,
+     "verbatimIds": [
+      33,
+      36,
+      42,
+      44,
+      46,
+      47,
+      48,
+      52,
+      53,
+      64,
+      69,
+      75,
+      77,
+      78
+     ],
+     "distribution": {
+      "positive": 17,
+      "negative": 0,
+      "neutral": 4
+     },
+     "priority": "Protect",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "AI-powered website/app building capability",
+     "summary": "Users describe how well Lovable turns ideas into working websites and apps, praising speed, ease of use, and output quality, with some noting inconsistent results or bugs it introduces.",
+     "action": "Invest in improving consistency of AI-generated output and reduce the number of iterations needed to get accurate results.",
+     "confidence": "high",
+     "volume": 20,
+     "sentiment": 0.622,
+     "impact": 0.507,
+     "impactReliable": true,
+     "impactRatedN": 20,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      0.529,
+      0.714
+     ],
+     "nSentences": 58,
+     "verbatimIds": [
+      31,
+      35,
+      36,
+      39,
+      40,
+      41,
+      43,
+      45,
+      50,
+      55,
+      57,
+      59,
+      60,
+      62,
+      63,
+      65,
+      68,
+      76,
+      79,
+      80
+     ],
+     "distribution": {
+      "positive": 47,
+      "negative": 1,
+      "neutral": 10
+     },
+     "priority": "Protect",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Login and account access",
+     "summary": "A few users report being unable to log in or get past the home screen, including errors when signing in with Google.",
+     "action": "Investigate and resolve authentication error codes and Google sign-in flow issues.",
+     "confidence": "medium",
+     "volume": 1,
+     "sentiment": -0.6,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 1,
+     "significant": null,
+     "effect": null,
+     "ci95": null,
+     "nSentences": 1,
+     "verbatimIds": [
+      56
+     ],
+     "distribution": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 0
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "AI autonomy and unwanted changes",
+     "summary": "Some users are frustrated that the AI makes unrequested project changes or continues actions after being told to stop, leading to wasted credits and a feeling of being overridden.",
+     "action": "Add stronger user controls to halt AI actions immediately and prevent unsolicited modifications to projects.",
+     "confidence": "medium",
+     "volume": 2,
+     "sentiment": -0.5,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 2,
+     "significant": true,
+     "effect": "large",
+     "ci95": [
+      -0.825,
+      -0.175
+     ],
+     "nSentences": 7,
+     "verbatimIds": [
+      49,
+      63
+     ],
+     "distribution": {
+      "positive": 0,
+      "negative": 5,
+      "neutral": 2
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    },
+    {
+     "theme": "Mobile app vs. website feature parity",
+     "summary": "Users note that the mobile app is convenient for working on the go but is glitchy and lacks many features available on the full website version.",
+     "action": "Align mobile app functionality and stability with the web platform to close the feature gap.",
+     "confidence": "medium",
+     "volume": 3,
+     "sentiment": -0.133,
+     "impact": null,
+     "impactReliable": false,
+     "impactRatedN": 3,
+     "significant": false,
+     "effect": "medium",
+     "ci95": [
+      -0.653,
+      0.387
+     ],
+     "nSentences": 9,
+     "verbatimIds": [
+      71,
+      72,
+      74
+     ],
+     "distribution": {
+      "positive": 4,
+      "negative": 5,
+      "neutral": 0
+     },
+     "priority": "Low evidence",
+     "sourceConcentration": null
+    }
+   ],
+   "emotions": [
+    {
+     "label": "delight",
+     "count": 57,
+     "pct": 47.5,
+     "valence": "pos"
+    },
+    {
+     "label": "frustration",
+     "count": 23,
+     "pct": 19.2,
+     "valence": "neg"
+    },
+    {
+     "label": "trust",
+     "count": 12,
+     "pct": 10.0,
+     "valence": "pos"
+    },
+    {
+     "label": "indifference",
+     "count": 10,
+     "pct": 8.3,
+     "valence": "neu"
+    },
+    {
+     "label": "anger",
+     "count": 7,
+     "pct": 5.8,
+     "valence": "neg"
+    },
+    {
+     "label": "relief",
+     "count": 4,
+     "pct": 3.3,
+     "valence": "pos"
+    },
+    {
+     "label": "disappointment",
+     "count": 4,
+     "pct": 3.3,
+     "valence": "neg"
+    },
+    {
+     "label": "anxiety",
+     "count": 2,
+     "pct": 1.7,
+     "valence": "neg"
+    },
+    {
+     "label": "confusion",
+     "count": 1,
+     "pct": 0.8,
+     "valence": "neg"
+    }
+   ],
+   "valenceSplit": {
+    "pos": 60.8,
+    "neu": 8.3,
+    "neg": 30.8
+   },
+   "scatter": [
+    {
+     "r": 5,
+     "s": 0.767
+    },
+    {
+     "r": 1,
+     "s": -0.367
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 2,
+     "s": -0.567
+    },
+    {
+     "r": 5,
+     "s": 0.744
+    },
+    {
+     "r": 5,
+     "s": 0.367
+    },
+    {
+     "r": 5,
+     "s": 0.4
+    },
+    {
+     "r": 5,
+     "s": 0.0
+    },
+    {
+     "r": 5,
+     "s": 0.3
+    },
+    {
+     "r": 5,
+     "s": 0.883
+    },
+    {
+     "r": 5,
+     "s": 0.635
+    },
+    {
+     "r": 5,
+     "s": 0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.85
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 3,
+     "s": -0.75
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 1,
+     "s": -0.6
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": 0.525
+    },
+    {
+     "r": 4,
+     "s": 0.138
+    },
+    {
+     "r": 5,
+     "s": 0.867
+    },
+    {
+     "r": 5,
+     "s": -0.6
+    },
+    {
+     "r": 5,
+     "s": 0.75
+    },
+    {
+     "r": 3,
+     "s": -0.3
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.333
+    },
+    {
+     "r": 1,
+     "s": -0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 5,
+     "s": -0.167
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 2,
+     "s": -0.45
+    },
+    {
+     "r": 4,
+     "s": 0.1
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    },
+    {
+     "r": 2,
+     "s": -0.6
+    },
+    {
+     "r": 1,
+     "s": -0.157
+    },
+    {
+     "r": 5,
+     "s": 0.6
+    },
+    {
+     "r": 1,
+     "s": -0.7
+    },
+    {
+     "r": 2,
+     "s": -0.7
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.5
+    },
+    {
+     "r": 5,
+     "s": 0.8
+    },
+    {
+     "r": 5,
+     "s": 0.9
+    }
+   ],
+   "painPoints": [
+    {
+     "quote": "Most annoying when dealing with a subscription not only do I barely use the app anymore but when I want to cancel my subscription I have to wait 1 month so that they can keep charging my card so ANNOYING",
+     "store": "App Store",
+     "rating": 1,
+     "score": -0.8,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 9,
+     "themeImpact": -0.321,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    },
+    {
+     "quote": "Couldn’t even finish my first task before it brought a paywall up . Horrible. DO NOT RECOMMEND",
+     "store": "App Store",
+     "rating": 1,
+     "score": -0.7,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 9,
+     "themeImpact": -0.321,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    },
+    {
+     "quote": "The mobile app is glitchy, site often does not load, and it does not have even close to the features of the website.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.7,
+     "tag": "App stability and performance",
+     "themeVolume": 8,
+     "themeImpact": -0.355,
+     "whyItMatters": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures."
+    },
+    {
+     "quote": "Started using for the first time; after inputting info to build website; system loads/analyzed/asked questions and frozen; 5x straight.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.6,
+     "tag": "App stability and performance",
+     "themeVolume": 8,
+     "themeImpact": -0.355,
+     "whyItMatters": "Several users report crashes, freezing, endless loading screens, and the app failing to complete tasks, sometimes even consuming credits during these failures."
+    },
+    {
+     "quote": "This app is constantly crashing. It also utilizes credits during the crash that you ultimately lose during the process. Please initiate a fix.",
+     "store": "App Store",
+     "rating": 2,
+     "score": -0.57,
+     "tag": "Credits, pricing and subscription plans",
+     "themeVolume": 9,
+     "themeImpact": -0.321,
+     "whyItMatters": "Customers frequently complain about confusing credit consumption, expensive or opaque subscription pricing, paywalls appearing early, and difficulty cancelling subscriptions, while some ask for more generous free plans."
+    }
+   ],
+   "untagged": {
+    "count": 2,
+    "pct": 4.0,
+    "meanSentiment": 0.2,
+    "examples": [
+     "It says Houston we have problem and won’t let me work all th",
+     "This app has been one of the easiest to navigate and helped "
+    ]
+   },
+   "validation": {
+    "testable": true,
+    "n": 50,
+    "spearman_rho": 0.724,
+    "p_value": 0.0,
+    "interpretation": "Strong agreement with star ratings — scoring prompt looks sound."
+   },
+   "omnibus": {
+    "testable": true,
+    "test": "Kruskal-Wallis H",
+    "h_statistic": 75.741,
+    "p_value": 0.0,
+    "significant": true,
+    "interpretation": "Themes differ meaningfully in sentiment."
+   },
+   "trend": {
+    "period_days": 7,
+    "current_n": 10,
+    "previous_n": 15,
+    "undated_n": 0,
+    "current_avg": 0.02,
+    "previous_avg": 0.577,
+    "comparable": true,
+    "delta": -0.557,
+    "direction": "down"
+   }
+  }
+ },
+ "platform": [
+  {
+   "id": "google_play",
+   "label": "Google Play",
+   "nss": 66.7,
+   "pctNegative": 12.1,
+   "pctPositive": 78.8,
+   "meanSentiment": 0.455,
+   "nReviews": 30,
+   "nPhrases": 33,
+   "avgRating": 4.63
+  },
+  {
+   "id": "app_store",
+   "label": "App Store",
+   "nss": 36.7,
+   "pctNegative": 25.0,
+   "pctPositive": 61.7,
+   "meanSentiment": 0.297,
+   "nReviews": 50,
+   "nPhrases": 120,
+   "avgRating": 4.24
+  }
+ ],
+ "reviews": [
+  {
+   "id": 1,
+   "author": "Ken D'Amato (kenjf65)",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "Gets it done!",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Gets it done!",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "author": "WheelchairAbility Llc.",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "I love it",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I love it",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "author": "Joseph George",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "it's a must have app for everything you need it's one of the best Al app, kudos 👍",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "it's a must have app for everything you need it's one of the best Al app, kudos 👍",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "author": "SHIVAM KUMAR",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "very useful",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "very useful",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "author": "Oj Mhan",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I love this app",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I love this app",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "author": "Moriadeke Awolowo",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 1,
+   "text": "worst",
+   "score": -0.8,
+   "primaryEmotion": "disappointment",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "worst",
+     "score": -0.8,
+     "emotion": "disappointment"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "author": "Rose Kumar",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-09-01",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 4,
+   "text": "just one click ☺️",
+   "score": 0.4,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "just one click ☺️",
+     "score": 0.4,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "author": "Bokang Motloung",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-31",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "Best",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Best",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "author": "Olaiya Philip",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-31",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 4,
+   "text": "every good",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "every good",
+     "score": 0.5,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "author": "Chijioke Onwubiko",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-31",
+   "version": null,
+   "engagement": null,
+   "rating": 5,
+   "text": "I love lovable. It delivers lovable things.",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I love lovable.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "It delivers lovable things.",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "author": "use The",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-31",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "good",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "good",
+     "score": 0.5,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "author": "Nelly Makasa",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": null,
+   "engagement": null,
+   "rating": 5,
+   "text": "wonderful app lovable helps me to bring my ideas to life and make my apps work and anyone can now access them am very thankful for such a wonderful app but add more chances on the free plan for it to complete making an app.",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "wonderful app lovable helps me to bring my ideas to life and make my apps work and anyone can now access them am very thankful for such a wonderful app but add more chances on the free plan for it to complete making an app.",
+     "score": 0.5,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "author": "Sunday Lamidi",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "just amazing 🤩😍",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "just amazing 🤩😍",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "author": "Olimi Raymond",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "this ai is good for studies and good for making research if prompted well ...I love it and proud to have it my every accessory as my default ai ...yes its a 5000 stars 🌟 to me ...I love it",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "this ai is good for studies and good for making research if prompted well ...I love it and proud to have it my every accessory as my default ai ...yes its a 5000 stars 🌟 to me ...I love it",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "author": "Abdullrafay Ashfaq",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": null,
+   "engagement": null,
+   "rating": 5,
+   "text": "hi I am dev suddenly I working in new project my laptop is going to fix so I work on my phone I go first to Claude and say fix this zip file but he said it is impossible then I tried lovable bro it fix all app bugs I really appreciate this ai",
+   "score": 0.8,
+   "primaryEmotion": "relief",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "hi I am dev suddenly I working in new project my laptop is going to fix so I work on my phone I go first to Claude and say fix this zip file but he said it is impossible then I tried lovable bro it fix all app bugs I really appreciate this ai",
+     "score": 0.8,
+     "emotion": "relief"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "author": "Matteo Fredrick",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "nice app",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "nice app",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "author": "Rose Joshua",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": null,
+   "engagement": null,
+   "rating": 3,
+   "text": "it's a great tool but recently I can't log into my account it keeps showing this error code and that's frustrating 😞",
+   "score": -0.5,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Login and account access"
+   ],
+   "phrases": [
+    {
+     "text": "it's a great tool but recently I can't log into my account it keeps showing this error code and that's frustrating 😞",
+     "score": -0.5,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "author": "Sohail kazi",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "good 😊",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "good 😊",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "author": "Claudette Gunter",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-30",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "Lovable makes it easy and enjoyable to be creative.",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Lovable makes it easy and enjoyable to be creative.",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "author": "Jeffer",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 4,
+   "text": "I like it",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I like it",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "author": "Dany Normandeau",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": null,
+   "engagement": null,
+   "rating": 3,
+   "text": "I love LOVABLE ! BUT !!! This AI take decisions and cost you credits for nothing, it will take decisions do modify your project in way you never ask and event when you exclicit tell it DO NOTHING !!",
+   "score": -0.03,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans",
+    "AI autonomy and unwanted changes"
+   ],
+   "phrases": [
+    {
+     "text": "I love LOVABLE !",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "BUT !!!",
+     "score": -0.2,
+     "emotion": "frustration"
+    },
+    {
+     "text": "This AI take decisions and cost you credits for nothing, it will take decisions do modify your project in way you never ask and event when you exclicit tell it DO NOTHING !!",
+     "score": -0.8,
+     "emotion": "anger"
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "author": "mattGWAPO12",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "il give this an 5 star first if I can upload a app a website or something for free if it cost like usd but I'm Filipino I will not like this because I'm trying to make my own phone tips and facts website and app I did GoDaddy but it tried to make me do money to publish it.. so please if this makes me wanna buy a subscription to upload a website/app I'm 1 staring this.",
+   "score": -0.5,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "il give this an 5 star first if I can upload a app a website or something for free if it cost like usd but I'm Filipino I will not like this because I'm trying to make my own phone tips and facts website and app I did GoDaddy but it tried to make me do money to publish it.. so please if this makes me wanna buy a subscription to upload a website/app I'm 1 staring this.",
+     "score": -0.5,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "author": "SPD CEO ERICSON",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "very good app",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "very good app",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "author": "Harif Moha",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "this app is good",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "this app is good",
+     "score": 0.5,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "author": "pyin oolwinboy",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": null,
+   "engagement": null,
+   "rating": 5,
+   "text": "very good application.",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "very good application.",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "author": "Anil Darekar",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-29",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "nice for creat website but credits use are very fast for a short works",
+   "score": -0.1,
+   "primaryEmotion": "disappointment",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "nice for creat website but credits use are very fast for a short works",
+     "score": -0.1,
+     "emotion": "disappointment"
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "author": "A Google user",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-28",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "amazing",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "amazing",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "author": "Naitik Bhendare",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-28",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "Such a Masterpiece fir beginner 🔰",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Such a Masterpiece fir beginner 🔰",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "author": "Faraz Ali",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-28",
+   "version": null,
+   "engagement": null,
+   "rating": 5,
+   "text": "YouTube Shorts Script Extractor 🎬📝",
+   "score": 0.0,
+   "primaryEmotion": "indifference",
+   "themes": [],
+   "phrases": [
+    {
+     "text": "YouTube Shorts Script Extractor 🎬📝",
+     "score": 0.0,
+     "emotion": "indifference"
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "author": "Edward odhiambo",
+   "source": "google_play",
+   "sourceLabel": "Google Play",
+   "date": "2026-08-28",
+   "version": "1.1.1",
+   "engagement": null,
+   "rating": 5,
+   "text": "lovable is the best for all your website needs",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "lovable is the best for all your website needs",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "author": "locatejake",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-29",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I use so many tools but Lovable is BY FAR my favorite when it comes to idea mapping. It’s more than a vibe coding tool, it’s an incredibly useful visual planner and builder that really helps bring ideas to life (and I’m not even using it to its fullest potential!!!!). Highly recommend!",
+   "score": 0.77,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "I use so many tools but Lovable is BY FAR my favorite when it comes to idea mapping.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "It’s more than a vibe coding tool, it’s an incredibly useful visual planner and builder that really helps bring ideas to life (and I’m not even using it to its fullest potential!!!!).",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "Highly recommend!",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "author": "Brandon Harken",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-29",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 1,
+   "text": "The MVP churn is real with the most recent raise, the foot is firmly on the gas pedal as they are getting a 26x revenue multiple on valuation and certainly want to preserve it. The moment the MVP churn and nickel/diming is truly recognized they will hit a down round and drop to a 6-10x and be hit hard. My biggest issue when I used them was credit transparency and drift.",
+   "score": -0.37,
+   "primaryEmotion": "anxiety",
+   "themes": [
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "The MVP churn is real with the most recent raise, the foot is firmly on the gas pedal as they are getting a 26x revenue multiple on valuation and certainly want to preserve it.",
+     "score": -0.2,
+     "emotion": "anxiety"
+    },
+    {
+     "text": "The moment the MVP churn and nickel/diming is truly recognized they will hit a down round and drop to a 6-10x and be hit hard.",
+     "score": -0.5,
+     "emotion": "anxiety"
+    },
+    {
+     "text": "My biggest issue when I used them was credit transparency and drift.",
+     "score": -0.4,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "author": "T East0311",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-28",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Unreal",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Unreal",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "author": "Lia Mal",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-26",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 2,
+   "text": "This app is constantly crashing. It also utilizes credits during the crash that you ultimately lose during the process. Please initiate a fix.",
+   "score": -0.57,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Credits, pricing and subscription plans",
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "This app is constantly crashing.",
+     "score": -0.8,
+     "emotion": "frustration"
+    },
+    {
+     "text": "It also utilizes credits during the crash that you ultimately lose during the process.",
+     "score": -0.7,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Please initiate a fix.",
+     "score": -0.2,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "author": "Purpleginger0",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-24",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "A company that my dad works for invested in Lovable. My dad told me about because I’m super into this stuff and I cannot stop using it!! I made a website to help my grandma navigate her phone, a free planner, and even an online board game!!! I am absolutely obsessed and I’m so happy that I found out about this. I’ve been making website after website and they all run perfectly smooth, have fantastic aesthetics and took 10 minutes tops to make. I can send very long detailed prints to lovable and within five minutes it follows the prompt exactly. The follow up questions are a very helpful feature that ensures my website is absolutely flawless. Thank you so much to the creators who made this app!!!",
+   "score": 0.74,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "A company that my dad works for invested in Lovable.",
+     "score": 0.0,
+     "emotion": "indifference"
+    },
+    {
+     "text": "My dad told me about because I’m super into this stuff and I cannot stop using it!!",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "I made a website to help my grandma navigate her phone, a free planner, and even an online board game!!!",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "I am absolutely obsessed and I’m so happy that I found out about this.",
+     "score": 0.95,
+     "emotion": "delight"
+    },
+    {
+     "text": "I’ve been making website after website and they all run perfectly smooth, have fantastic aesthetics and took 10 minutes tops to make.",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "I can send very long detailed prints to lovable and within five minutes it follows the prompt exactly.",
+     "score": 0.8,
+     "emotion": "trust"
+    },
+    {
+     "text": "The follow up questions are a very helpful feature that ensures my website is absolutely flawless.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "Thank you so much to the creators who made this app!!!",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "author": "AznNupe",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-21",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Developers??? We don’t need no sticky developers!  Lovable is simply amazing.",
+   "score": 0.37,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience",
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Developers???",
+     "score": 0.0,
+     "emotion": "confusion"
+    },
+    {
+     "text": "We don’t need no sticky developers!",
+     "score": 0.2,
+     "emotion": "delight"
+    },
+    {
+     "text": "Lovable is simply amazing.",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "author": "Aetheris Technology",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-19",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Experts in making companies visible AND making brand AI be as human as you are.\n\nAetheris.Technology \n\nBuild where experimentation is cheap. Finish where production is powerful. Obsidianvibe.live becomes the daily-driver development environment for builders.",
+   "score": 0.4,
+   "primaryEmotion": "trust",
+   "themes": [],
+   "phrases": [
+    {
+     "text": "Experts in making companies visible AND making brand AI be as human as you are.",
+     "score": 0.6,
+     "emotion": "trust"
+    },
+    {
+     "text": "Aetheris.Technology Build where experimentation is cheap.",
+     "score": 0.3,
+     "emotion": "indifference"
+    },
+    {
+     "text": "Finish where production is powerful.",
+     "score": 0.3,
+     "emotion": "indifference"
+    },
+    {
+     "text": "Obsidianvibe.live becomes the daily-driver development environment for builders.",
+     "score": 0.4,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "author": "ريان صباح صبحي",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-19",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "100‎%‎",
+   "score": 0.0,
+   "primaryEmotion": "indifference",
+   "themes": [],
+   "phrases": [
+    {
+     "text": "100‎%‎",
+     "score": 0.0,
+     "emotion": "indifference"
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "author": "Joseph Juneau",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-16",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I’m trying to create a business and I just wanted to express my gratitude for what this can create. It would be nice to have a little bit more added three features because of the business and concept really creates some kind of lift off or foundation or structure I would definitely be sure to add a substantial donation to Lovable for their efforts and help with cheating that goal. So far so good I would like to be able to use it a little further than a couple questions here and there maybe there’s a free subscription plan you can use like a monthly everything is unlimited to get people started and then incorporate commission based fees, perhaps but nothing so over the top substantial as a monthly subscription because for us small independent developers it’s a bit pricey, and we’re on a very tight budget, depending where we live cost of living and of course inflation. So with everything in mind, I would suggest this app to another Developer absolutely internally grateful however it would be nice to be able to use it for free for say two weeks to a month and then incorporate Maybe a commission base subscription service. Respectively, of course.",
+   "score": 0.3,
+   "primaryEmotion": "trust",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "I’m trying to create a business and I just wanted to express my gratitude for what this can create.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "It would be nice to have a little bit more added three features because of the business and concept really creates some kind of lift off or foundation or structure I would definitely be sure to add a substantial donation to Lovable for their efforts and help with cheating that goal.",
+     "score": 0.3,
+     "emotion": "trust"
+    },
+    {
+     "text": "So far so good I would like to be able to use it a little further than a couple questions here and there maybe there’s a free subscription plan you can use like a monthly everything is unlimited to get people started and then incorporate commission based fees, perhaps but nothing so over the top substantial as a monthly subscription because for us small independent developers it’s a bit pricey, and we’re on a very tight budget, depending where we live cost of living and of course inflation.",
+     "score": 0.0,
+     "emotion": "frustration"
+    },
+    {
+     "text": "So with everything in mind, I would suggest this app to another Developer absolutely internally grateful however it would be nice to be able to use it for free for say two weeks to a month and then incorporate Maybe a commission base subscription service.",
+     "score": 0.4,
+     "emotion": "trust"
+    },
+    {
+     "text": "Respectively, of course.",
+     "score": 0.0,
+     "emotion": "indifference"
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "author": "Yupsy007",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-13",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Lovable makes turning ideas into functional apps ridiculously fast and intuitive. The AI workflow is smooth, accurate, and saves hours of work. Easily a 5-star tool!",
+   "score": 0.88,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Lovable makes turning ideas into functional apps ridiculously fast and intuitive.",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "The AI workflow is smooth, accurate, and saves hours of work.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "Easily a 5-star tool!",
+     "score": 0.95,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "author": "Shannoninpa",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-12",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "My experience with Lovable has been nothing short of extraordinary. As an entrepreneur and author, I have plenty of ideas, but I don’t want technology to stand between an idea and making it a reality. Lovable has changed that for me.\n\nWhat I appreciate most is the ability to take an idea that is in my head, describe what I want in everyday language, and watch it begin to come to life. Instead of spending months trying to explain my vision to developers—or paying thousands of dollars before I even know whether an idea will work—I can build, experiment, make changes, and keep moving forward.\n\nLovable has helped me turn concepts into real, working websites and applications faster than I ever imagined possible. That speed gives an entrepreneur something incredibly valuable: momentum.\n\nI also love that I can continue refining an idea as it develops. I’m not locked into my first thought. I can see something, improve it, and immediately begin thinking about what comes next.\n\nFor entrepreneurs who have big ideas but aren’t programmers, Lovable can be a game changer. It gives people like me the opportunity to create, innovate, and turn imagination into something real.\n\nShannon Elizabeth Johnson\nEntrepreneur & Author (HookedOnAuthor.com)",
+   "score": 0.63,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "My experience with Lovable has been nothing short of extraordinary.",
+     "score": 0.95,
+     "emotion": "delight"
+    },
+    {
+     "text": "As an entrepreneur and author, I have plenty of ideas, but I don’t want technology to stand between an idea and making it a reality.",
+     "score": 0.1,
+     "emotion": "trust"
+    },
+    {
+     "text": "Lovable has changed that for me.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "What I appreciate most is the ability to take an idea that is in my head, describe what I want in everyday language, and watch it begin to come to life.",
+     "score": 0.85,
+     "emotion": "delight"
+    },
+    {
+     "text": "Instead of spending months trying to explain my vision to developers—or paying thousands of dollars before I even know whether an idea will work—I can build, experiment, make changes, and keep moving forward.",
+     "score": 0.6,
+     "emotion": "relief"
+    },
+    {
+     "text": "Lovable has helped me turn concepts into real, working websites and applications faster than I ever imagined possible.",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "That speed gives an entrepreneur something incredibly valuable: momentum.",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "I also love that I can continue refining an idea as it develops.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "I’m not locked into my first thought.",
+     "score": 0.3,
+     "emotion": "trust"
+    },
+    {
+     "text": "I can see something, improve it, and immediately begin thinking about what comes next.",
+     "score": 0.6,
+     "emotion": "delight"
+    },
+    {
+     "text": "For entrepreneurs who have big ideas but aren’t programmers, Lovable can be a game changer.",
+     "score": 0.85,
+     "emotion": "delight"
+    },
+    {
+     "text": "It gives people like me the opportunity to create, innovate, and turn imagination into something real.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "Shannon Elizabeth Johnson Entrepreneur & Author (HookedOnAuthor.com)",
+     "score": 0.0,
+     "emotion": "indifference"
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "author": "amaphelia",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-11",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "It is very good",
+   "score": 0.7,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "It is very good",
+     "score": 0.7,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "author": "Eagles Reformas",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-08",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Muito rápido e preciso o app muitas opções para construir!",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Muito rápido e preciso o app muitas opções para construir!",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "author": "The Midlife Mystic",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-07",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "What this tool does is literally unbelievable.",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "What this tool does is literally unbelievable.",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "author": "J.BeBreezy",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-07",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Very easy to use helped me build a few websites and they come out very clean and the ai is well trained",
+   "score": 0.85,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Very easy to use helped me build a few websites and they come out very clean and the ai is well trained",
+     "score": 0.85,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "author": "Sosmith1",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-06",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Is good because it helps me as a developer",
+   "score": 0.6,
+   "primaryEmotion": "trust",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Is good because it helps me as a developer",
+     "score": 0.6,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "author": "Mirvens509",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-06",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Trop cooooollllll",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Trop cooooollllll",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "author": "Iman azizi",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-05",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Very very very fantastic app",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Very very very fantastic app",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "author": "Mitri De",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-04",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 3,
+   "text": "I do not appreciate the Loveable chatbot using up my credits unnecessarily:\nI press the stop button to stop the chat from initiating a build sequence, but it then resumes (like it’s overriding my choice to stop) and ends up using waisting more credits. \nIt also throws in ridiculous changes to my project that I did not request and I end up having to waste even more credits restore what the chatbot compromised. These problems result in me having to purchase more credits. It feels very scam-like",
+   "score": -0.75,
+   "primaryEmotion": "anger",
+   "themes": [
+    "Credits, pricing and subscription plans",
+    "AI autonomy and unwanted changes"
+   ],
+   "phrases": [
+    {
+     "text": "I do not appreciate the Loveable chatbot using up my credits unnecessarily: I press the stop button to stop the chat from initiating a build sequence, but it then resumes (like it’s overriding my choice to stop) and ends up using waisting more credits.",
+     "score": -0.8,
+     "emotion": "anger"
+    },
+    {
+     "text": "It also throws in ridiculous changes to my project that I did not request and I end up having to waste even more credits restore what the chatbot compromised.",
+     "score": -0.8,
+     "emotion": "frustration"
+    },
+    {
+     "text": "These problems result in me having to purchase more credits.",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "It feels very scam-like",
+     "score": -0.8,
+     "emotion": "anger"
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "author": "Google gems",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-04",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "It is helpful for me to create my business for the community",
+   "score": 0.6,
+   "primaryEmotion": "trust",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "It is helpful for me to create my business for the community",
+     "score": 0.6,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "author": "XxMmStErxX",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-03",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 1,
+   "text": "didn’t work",
+   "score": -0.6,
+   "primaryEmotion": "disappointment",
+   "themes": [
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "didn’t work",
+     "score": -0.6,
+     "emotion": "disappointment"
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "author": "Anthony magicheart",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-02",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "best app",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "best app",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "author": "BigJayjohnsom",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-08-02",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I’m pleasantly surprised by the connection to lovable and myself. I was introduced to the AI by ChatGPT. As to try but it turned out this is exactly what I needed. Well done LOVABLE!",
+   "score": 0.52,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I’m pleasantly surprised by the connection to lovable and myself.",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "I was introduced to the AI by ChatGPT.",
+     "score": 0.0,
+     "emotion": "indifference"
+    },
+    {
+     "text": "As to try but it turned out this is exactly what I needed.",
+     "score": 0.6,
+     "emotion": "relief"
+    },
+    {
+     "text": "Well done LOVABLE!",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "author": "smyle4them",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-31",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 4,
+   "text": "Love the app, it has helped me tremendously. The only issue I have is that after almost every new prompt I submit, I have to force close the app to get it to finish loading. It still works, but it can get annoying with the hang ups. Definitely would still recommend.",
+   "score": 0.14,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "Love the app, it has helped me tremendously.",
+     "score": 0.85,
+     "emotion": "delight"
+    },
+    {
+     "text": "The only issue I have is that after almost every new prompt I submit, I have to force close the app to get it to finish loading.",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "It still works, but it can get annoying with the hang ups.",
+     "score": -0.3,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Definitely would still recommend.",
+     "score": 0.6,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "author": "AlexSandeep",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-25",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "One of the best AI Assited builder tool that I have used in recent times. Better than Replit, Cursor and all the other coding/building assistants out there. The best!!!",
+   "score": 0.87,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "One of the best AI Assited builder tool that I have used in recent times.",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "Better than Replit, Cursor and all the other coding/building assistants out there.",
+     "score": 0.8,
+     "emotion": "delight"
+    },
+    {
+     "text": "The best!!!",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "author": "golden the rater",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-23",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Using google to sign in I can’t get pass home screen",
+   "score": -0.6,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Login and account access"
+   ],
+   "phrases": [
+    {
+     "text": "Using google to sign in I can’t get pass home screen",
+     "score": -0.6,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "author": "Dibore05",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-21",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Lovable gave me the ability to easily edit my own website and bring my design ideas to life exactly how I pictured them. No more paying hundreds of dollars to have someone else design it for me. This has been a lifesaver.",
+   "score": 0.75,
+   "primaryEmotion": "relief",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Lovable gave me the ability to easily edit my own website and bring my design ideas to life exactly how I pictured them.",
+     "score": 0.85,
+     "emotion": "delight"
+    },
+    {
+     "text": "No more paying hundreds of dollars to have someone else design it for me.",
+     "score": 0.6,
+     "emotion": "relief"
+    },
+    {
+     "text": "This has been a lifesaver.",
+     "score": 0.8,
+     "emotion": "relief"
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "author": "gamer192484783",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-21",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 3,
+   "text": "Constantly the app has issues with loading my project and then it reloads it and then it will finally work. Sometimes it goes to a white screen that just continues to load and load and load and it’s able to be replicated pretty easily. I’m also on the newest iPhone with the newest iOS update and the newest Lovable bill and it still does it. Other than that, the application has helped quite a bit..",
+   "score": -0.3,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "Constantly the app has issues with loading my project and then it reloads it and then it will finally work.",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Sometimes it goes to a white screen that just continues to load and load and load and it’s able to be replicated pretty easily.",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "I’m also on the newest iPhone with the newest iOS update and the newest Lovable bill and it still does it.",
+     "score": -0.4,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Other than that, the application has helped quite a bit..",
+     "score": 0.4,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "author": "Bking demon",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-20",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Super good ai and really good sites I recommend saying the idea to ChatGPT/Claud and give the prompt to lovable",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Super good ai and really good sites I recommend saying the idea to ChatGPT/Claud and give the prompt to lovable",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "author": "CR72.0",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-19",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "This app is lovely to build a website on. I’m actually building my own work website currently. This is just the best app for building a website, but there are 10 credits you can use per day and that really limits my creative mind.",
+   "score": 0.33,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "This app is lovely to build a website on.",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "I’m actually building my own work website currently.",
+     "score": 0.3,
+     "emotion": "indifference"
+    },
+    {
+     "text": "This is just the best app for building a website, but there are 10 credits you can use per day and that really limits my creative mind.",
+     "score": 0.0,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 61,
+   "author": "NateTheGreat69420",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-18",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 1,
+   "text": "Most annoying when dealing with a subscription not only do I barely use the app anymore but when I want to cancel my subscription I have to wait 1 month so that they can keep charging my card so ANNOYING",
+   "score": -0.8,
+   "primaryEmotion": "anger",
+   "themes": [
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "Most annoying when dealing with a subscription not only do I barely use the app anymore but when I want to cancel my subscription I have to wait 1 month so that they can keep charging my card so ANNOYING",
+     "score": -0.8,
+     "emotion": "anger"
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "author": "Sebas_8",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-18",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Literally the most perfect app if you want to build a website.",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Literally the most perfect app if you want to build a website.",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "author": "sixstringtyler",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-16",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "Sometimes it does incredible work and other times it take 10 changes to get it to follow directions. This eats into your credits which feels purposeful. \nI would recommend using it but as soon as a stronger option comes along consider switching.",
+   "score": -0.17,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "AI-powered website/app building capability",
+    "Credits, pricing and subscription plans",
+    "AI autonomy and unwanted changes"
+   ],
+   "phrases": [
+    {
+     "text": "Sometimes it does incredible work and other times it take 10 changes to get it to follow directions.",
+     "score": -0.2,
+     "emotion": "frustration"
+    },
+    {
+     "text": "This eats into your credits which feels purposeful.",
+     "score": -0.4,
+     "emotion": "frustration"
+    },
+    {
+     "text": "I would recommend using it but as soon as a stronger option comes along consider switching.",
+     "score": 0.1,
+     "emotion": "indifference"
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "author": "Afra Zariat",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-08",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I’m 13 years old,who’s trying to make money.I saw videos about this app online and I said why not try it out. And guess what I already made $50 just by using this app. And it was 100% profitable.",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "I’m 13 years old,who’s trying to make money.I saw videos about this app online and I said why not try it out.",
+     "score": 0.0,
+     "emotion": "indifference"
+    },
+    {
+     "text": "And guess what I already made $50 just by using this app.",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "And it was 100% profitable.",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 65,
+   "author": "Izta1111",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-07",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "I really recommend this app for everyone who starts a business.",
+   "score": 0.8,
+   "primaryEmotion": "trust",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "I really recommend this app for everyone who starts a business.",
+     "score": 0.8,
+     "emotion": "trust"
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "author": "mbquigs",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-07",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 2,
+   "text": "On the free version, after you run out of your initial credits it prompts you to pay $39.99 to continue but does not tell you how many credits you’ll get for that ANYWHERE (if you Google it says it’s going to be 250). \n\nTurns out they give you 100. With the normal subscription pricing 100 is only $25. Not cool guys.",
+   "score": -0.45,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "On the free version, after you run out of your initial credits it prompts you to pay $39.99 to continue but does not tell you how many credits you’ll get for that ANYWHERE (if you Google it says it’s going to be 250).",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Turns out they give you 100.",
+     "score": -0.4,
+     "emotion": "disappointment"
+    },
+    {
+     "text": "With the normal subscription pricing 100 is only $25.",
+     "score": -0.3,
+     "emotion": "disappointment"
+    },
+    {
+     "text": "Not cool guys.",
+     "score": -0.5,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "author": "Ryan12774",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-07",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 4,
+   "text": "It says Houston we have problem and won’t let me work all the time but besides that I love this",
+   "score": 0.1,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "It says Houston we have problem and won’t let me work all the time but besides that I love this",
+     "score": 0.1,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "author": "Christian8$4",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-05",
+   "version": "1.1.0",
+   "engagement": null,
+   "rating": 5,
+   "text": "This app has been one of the easiest to navigate and helped me to produce my first app",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "This app has been one of the easiest to navigate and helped me to produce my first app",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "author": "goodvibes111",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-07-01",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "Absolutely love this platform",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Absolutely love this platform",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "author": "App to Test",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-30",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 2,
+   "text": "Started using for the first time; after inputting info to build website; system loads/analyzed/asked questions and frozen; 5x straight.",
+   "score": -0.6,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "App stability and performance"
+   ],
+   "phrases": [
+    {
+     "text": "Started using for the first time; after inputting info to build website; system loads/analyzed/asked questions and frozen; 5x straight.",
+     "score": -0.6,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 71,
+   "author": "Sigma sigma boy gyatt rizzler",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-29",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 1,
+   "text": "Lovable website is so good. I made a ton of video games and other stuff. The app sucks though. Whenever i log on, it just freezes and i cant tap anything. Help me pls bcs the app is not working and i dont appreciate how bad and horrible the app is. I like the website. I HATE THE APP.",
+   "score": -0.16,
+   "primaryEmotion": "delight",
+   "themes": [
+    "App stability and performance",
+    "Mobile app vs. website feature parity"
+   ],
+   "phrases": [
+    {
+     "text": "Lovable website is so good.",
+     "score": 0.7,
+     "emotion": "delight"
+    },
+    {
+     "text": "I made a ton of video games and other stuff.",
+     "score": 0.5,
+     "emotion": "delight"
+    },
+    {
+     "text": "The app sucks though.",
+     "score": -0.7,
+     "emotion": "anger"
+    },
+    {
+     "text": "Whenever i log on, it just freezes and i cant tap anything.",
+     "score": -0.6,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Help me pls bcs the app is not working and i dont appreciate how bad and horrible the app is.",
+     "score": -0.7,
+     "emotion": "anger"
+    },
+    {
+     "text": "I like the website.",
+     "score": 0.5,
+     "emotion": "delight"
+    },
+    {
+     "text": "I HATE THE APP.",
+     "score": -0.8,
+     "emotion": "anger"
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "author": "BernieMac34",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-28",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "Having the ability to work off my app on the phone has made working on my website a lot more convenient.",
+   "score": 0.6,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Mobile app vs. website feature parity"
+   ],
+   "phrases": [
+    {
+     "text": "Having the ability to work off my app on the phone has made working on my website a lot more convenient.",
+     "score": 0.6,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "author": "Truteller26",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-26",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 1,
+   "text": "Couldn’t even finish my first task before it brought a paywall up . Horrible. DO NOT RECOMMEND",
+   "score": -0.7,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "Credits, pricing and subscription plans"
+   ],
+   "phrases": [
+    {
+     "text": "Couldn’t even finish my first task before it brought a paywall up .",
+     "score": -0.5,
+     "emotion": "frustration"
+    },
+    {
+     "text": "Horrible.",
+     "score": -0.8,
+     "emotion": "disappointment"
+    },
+    {
+     "text": "DO NOT RECOMMEND",
+     "score": -0.8,
+     "emotion": "anger"
+    }
+   ]
+  },
+  {
+   "id": 74,
+   "author": "surfingonrails",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-25",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 2,
+   "text": "The mobile app is glitchy, site often does not load, and it does not have even close to the features of the website.",
+   "score": -0.7,
+   "primaryEmotion": "frustration",
+   "themes": [
+    "App stability and performance",
+    "Mobile app vs. website feature parity"
+   ],
+   "phrases": [
+    {
+     "text": "The mobile app is glitchy, site often does not load, and it does not have even close to the features of the website.",
+     "score": -0.7,
+     "emotion": "frustration"
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "author": "Librepets",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-25",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "Best thing",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Best thing",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "author": "Hhsjeueywwfwfwffwcw",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-24",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "So easy and fun to use",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "So easy and fun to use",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "author": "Tavomedin",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-23",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "Excelente servicio increíble en todo",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "Excelente servicio increíble en todo",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "author": "JamesMomey",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-23",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "This works",
+   "score": 0.5,
+   "primaryEmotion": "delight",
+   "themes": [
+    "Overall app experience"
+   ],
+   "phrases": [
+    {
+     "text": "This works",
+     "score": 0.5,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "author": "LF4848",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-19",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "Design friendly and easy to use | two thumbs up",
+   "score": 0.8,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "Design friendly and easy to use | two thumbs up",
+     "score": 0.8,
+     "emotion": "delight"
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "author": "GMVNJ",
+   "source": "app_store",
+   "sourceLabel": "App Store",
+   "date": "2026-06-16",
+   "version": "1.0.9",
+   "engagement": null,
+   "rating": 5,
+   "text": "This is the easiest web builder I have ever used! 10/10",
+   "score": 0.9,
+   "primaryEmotion": "delight",
+   "themes": [
+    "AI-powered website/app building capability"
+   ],
+   "phrases": [
+    {
+     "text": "This is the easiest web builder I have ever used!",
+     "score": 0.9,
+     "emotion": "delight"
+    },
+    {
+     "text": "10/10",
+     "score": 0.9,
+     "emotion": "delight"
+    }
+   ]
+  }
+ ],
+ "caveats": [
+  "Sentences from the same verbatim are not independent observations; clustering inflates apparent significance.",
+  "Themes can overlap (a verbatim may belong to several), so groups aren't mutually exclusive as most tests assume.",
+  "Sentiment scores are LLM judgments, not a validated instrument; treat them as a consistent proxy, not ground truth.",
+  "Source data is a convenience sample (whoever chose to post), not a random sample of customers.",
+  "7 themes tested; Bonferroni correction applied, which is conservative and may hide real effects."
+ ],
+ "summary": {
+  "headline": "Subscription and credit pricing transparency is the single largest fixable drag on the rating.",
+  "_stale": false,
+  "key_findings": [
+   "Pricing and subscription friction is a real, sizable problem: 13 mentions, sentiment -0.249, rating impact -0.209, statistically significant with a large effect.",
+   "App stability issues carry a similar per-review cost: 8 mentions, sentiment -0.239, rating impact -0.223, significant and large, concentrated on App Store.",
+   "The product's core strengths are worth protecting: AI-powered building (27 mentions, sentiment 0.59, impact +0.275) and overall app experience (34 mentions, sentiment 0.612, impact +0.301, concentrated on Google Play) are the two strongest positive drivers.",
+   "Login access and AI autonomy complaints are flagged but thin: 2 and 3 mentions respectively, too little volume to act on with confidence."
+  ]
+ },
+ "nextSteps": [
+  {
+   "title": "Prioritize fixing crash and freeze bugs, especially those that consume user credits during failures.",
+   "rationale": "8 mentions with sentiment -0.239 and a significant, large rating impact of -0.223, concentrated on App Store, mark this as a genuine but limited-volume issue worth investigating."
+  },
+  {
+   "title": "Improve transparency around credit costs and subscription terms, and simplify the cancellation process.",
+   "rationale": "13 mentions with sentiment -0.249 and a significant, large rating impact of -0.209 make this the highest-volume negative theme flagged for investigation."
+  }
+ ],
+ "narrative": {
+  "headline": "Subscription and credit pricing transparency is the single largest fixable drag on the rating.",
+  "key_findings": [
+   "Pricing and subscription friction is a real, sizable problem: 13 mentions, sentiment -0.249, rating impact -0.209, statistically significant with a large effect.",
+   "App stability issues carry a similar per-review cost: 8 mentions, sentiment -0.239, rating impact -0.223, significant and large, concentrated on App Store.",
+   "The product's core strengths are worth protecting: AI-powered building (27 mentions, sentiment 0.59, impact +0.275) and overall app experience (34 mentions, sentiment 0.612, impact +0.301, concentrated on Google Play) are the two strongest positive drivers.",
+   "Login access and AI autonomy complaints are flagged but thin: 2 and 3 mentions respectively, too little volume to act on with confidence."
+  ],
+  "platformHeadline": "App Store runs materially weaker than Google Play.",
+  "emotionTakeaway": "Delight dominates the emotional signal, far outpacing frustration.",
+  "trustStatement": "Broadly, yes.",
+  "trustExplanation": "Written feedback tracks the star rating in most cases, though not perfectly, across 80 reviews.",
+  "recommendations": [
+   {
+    "title": "Prioritize fixing crash and freeze bugs, especially those that consume user credits during failures.",
+    "rationale": "8 mentions with sentiment -0.239 and a significant, large rating impact of -0.223, concentrated on App Store, mark this as a genuine but limited-volume issue worth investigating."
+   },
+   {
+    "title": "Improve transparency around credit costs and subscription terms, and simplify the cancellation process.",
+    "rationale": "13 mentions with sentiment -0.249 and a significant, large rating impact of -0.209 make this the highest-volume negative theme flagged for investigation."
+   }
+  ]
+ }
+}

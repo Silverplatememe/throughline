@@ -1,0 +1,315 @@
+{
+  "company": "OK/Q8",
+  "generated": "03 Sep 2026",
+  "ingestion": {
+    "mode": "live_phase_1",
+    "company_slug": "ok-q8",
+    "generated_at": "2026-09-03T21:44:05.080551+00:00",
+    "sources": [
+      "google_play",
+      "app_store"
+    ],
+    "window": {
+      "requested_days": 7,
+      "effective_days": 30,
+      "expanded": true,
+      "reason": "insufficient_recent_volume",
+      "review_count": 1,
+      "minimum_reviews": 25,
+      "primary_review_count": 0,
+      "fallback_review_count": 1
+    },
+    "source_status": {
+      "google_play": {
+        "ok": true,
+        "count": 18,
+        "error": null,
+        "cached": false
+      },
+      "app_store": {
+        "ok": true,
+        "count": 75,
+        "error": null,
+        "cached": false
+      }
+    },
+    "review_fingerprint": "f8c233befaa1ded660a8"
+  },
+  "headline": null,
+  "sources": [
+    {
+      "id": "all",
+      "label": "All Sources",
+      "short": "All"
+    },
+    {
+      "id": "google_play",
+      "label": "Google Play",
+      "short": "Google Play"
+    }
+  ],
+  "scopes": {
+    "all": {
+      "kpis": {
+        "avgRating": 5.0,
+        "nss": 100.0,
+        "nReviews": 1,
+        "nPhrases": 1,
+        "agreement": null,
+        "agreementN": null
+      },
+      "themes": [
+        {
+          "theme": "App performance and speed",
+          "summary": "Customers appreciate the app's fast loading times and responsiveness.",
+          "action": "Monitor and maintain current performance standards; consider highlighting speed/performance in marketing materials to reinforce this strength.",
+          "confidence": "high",
+          "volume": 1,
+          "sentiment": 0.3,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": null,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            1
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Pricing",
+          "summary": "Some customers find the app or its features to be expensive relative to the value provided.",
+          "action": "Review pricing strategy and consider tiered pricing options or promotional pricing to address cost concerns without compromising revenue.",
+          "confidence": "high",
+          "volume": 1,
+          "sentiment": 0.3,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": null,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            1
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        }
+      ],
+      "emotions": [
+        {
+          "label": "indifference",
+          "count": 1,
+          "pct": 100.0,
+          "valence": "neu"
+        }
+      ],
+      "valenceSplit": {
+        "pos": 0.0,
+        "neu": 100.0,
+        "neg": 0.0
+      },
+      "scatter": [
+        {
+          "r": 5,
+          "s": 0.3
+        }
+      ],
+      "painPoints": [],
+      "untagged": {
+        "count": 0,
+        "pct": 0.0,
+        "meanSentiment": null,
+        "examples": []
+      },
+      "validation": {
+        "testable": false,
+        "note": "Only 1 rated verbatims scored; need 10+."
+      },
+      "omnibus": {
+        "testable": false,
+        "note": "Need 2+ themes with 5+ sentences each."
+      },
+      "trend": {
+        "comparable": false,
+        "note": "Not enough data spanning two 7-day periods (0 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+      }
+    },
+    "google_play": {
+      "kpis": {
+        "avgRating": 5.0,
+        "nss": 100.0,
+        "nReviews": 1,
+        "nPhrases": 1,
+        "agreement": null,
+        "agreementN": null
+      },
+      "themes": [
+        {
+          "theme": "App performance and speed",
+          "summary": "Customers appreciate the app's fast loading times and responsiveness.",
+          "action": "Monitor and maintain current performance standards; consider highlighting speed/performance in marketing materials to reinforce this strength.",
+          "confidence": "high",
+          "volume": 1,
+          "sentiment": 0.3,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": null,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            1
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Pricing",
+          "summary": "Some customers find the app or its features to be expensive relative to the value provided.",
+          "action": "Review pricing strategy and consider tiered pricing options or promotional pricing to address cost concerns without compromising revenue.",
+          "confidence": "high",
+          "volume": 1,
+          "sentiment": 0.3,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": null,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            1
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        }
+      ],
+      "emotions": [
+        {
+          "label": "indifference",
+          "count": 1,
+          "pct": 100.0,
+          "valence": "neu"
+        }
+      ],
+      "valenceSplit": {
+        "pos": 0.0,
+        "neu": 100.0,
+        "neg": 0.0
+      },
+      "scatter": [
+        {
+          "r": 5,
+          "s": 0.3
+        }
+      ],
+      "painPoints": [],
+      "untagged": {
+        "count": 0,
+        "pct": 0.0,
+        "meanSentiment": null,
+        "examples": []
+      },
+      "validation": {
+        "testable": false,
+        "note": "Only 1 rated verbatims scored; need 10+."
+      },
+      "omnibus": {
+        "testable": false,
+        "note": "Need 2+ themes with 5+ sentences each."
+      },
+      "trend": {
+        "comparable": false,
+        "note": "Not enough data spanning two 7-day periods (0 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+      }
+    }
+  },
+  "platform": [
+    {
+      "id": "google_play",
+      "label": "Google Play",
+      "nss": 100.0,
+      "pctNegative": 0.0,
+      "pctPositive": 100.0,
+      "meanSentiment": 0.3,
+      "nReviews": 1,
+      "nPhrases": 1,
+      "avgRating": 5.0
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "author": "johan johansson",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-11",
+      "version": "2.7.10.11",
+      "engagement": null,
+      "rating": 5,
+      "text": "Snabba laddare =) Lite dyra dock",
+      "score": 0.3,
+      "primaryEmotion": "indifference",
+      "themes": [
+        "App performance and speed",
+        "Pricing"
+      ],
+      "phrases": [
+        {
+          "text": "Snabba laddare =) Lite dyra dock",
+          "score": 0.3,
+          "emotion": "indifference"
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Sentences from the same verbatim are not independent observations; clustering inflates apparent significance.",
+    "Themes can overlap (a verbatim may belong to several), so groups aren't mutually exclusive as most tests assume.",
+    "Sentiment scores are LLM judgments, not a validated instrument; treat them as a consistent proxy, not ground truth.",
+    "Source data is a convenience sample (whoever chose to post), not a random sample of customers.",
+    "Only 1 sentences — confidence intervals will be wide and rankings unstable between runs."
+  ],
+  "summary": null,
+  "nextSteps": [],
+  "narrative": null,
+  "companySlug": "ok-q8",
+  "resolution": {
+    "mode": "discovered",
+    "confidence": 100.0,
+    "iosAppId": "1484918898",
+    "androidAppId": "com.okq8.elbilsladdning"
+  },
+  "analysisProgress": {
+    "stage": "complete",
+    "isPartial": false,
+    "processedReviews": 1,
+    "totalReviews": 1
+  }
+}
