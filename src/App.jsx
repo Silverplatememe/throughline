@@ -847,6 +847,37 @@ function KpiRow({ slice, store }) {
   );
 }
 
+function KpiLoadingRow() {
+  return (
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4" aria-label="Dashboard metrics are loading">
+      {["Avg star rating", "Net sentiment", "Total reviews", "Analysis confidence"].map((label, index) => (
+        <Card key={label} className="tl-kpi-loading px-4 py-3" style={{ "--tl-load-index": index }}>
+          <span className={EYEBROW} style={{ color: INK2 }}>{label}</span>
+          <div className="tl-kpi-loading-value" aria-hidden="true"><i /><i /><i /></div>
+          <div className="tl-kpi-loading-signal" aria-hidden="true"><span /></div>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function WeeklyPulseLoading() {
+  return (
+    <Card className="overflow-hidden" aria-label="Weekly trend is being assembled">
+      <div className="border-b border-[#EEE9E5] px-5 py-4">
+        <h2 className="text-[14px] font-bold" style={{ color: INK }}>Weekly pulse</h2>
+        <span className="text-xs" style={{ color: INK3 }}>Assembling weekly periods from the review evidence.</span>
+      </div>
+      <div className="tl-weekly-loading" aria-hidden="true">
+        <span className="tl-weekly-loading-label">Trend emerging</span>
+        <i className="tl-weekly-loading-axis" />
+        <i className="tl-weekly-loading-trace" />
+        <i className="tl-weekly-loading-node" />
+      </div>
+    </Card>
+  );
+}
+
 function WeeklyPulse({ weeks = [], activeWeek, onSelectWeek }) {
   const [focus, setFocus] = useState("sentiment");
   const [hoveredWeek, setHoveredWeek] = useState(null);
@@ -2410,6 +2441,10 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
   const progressProcessed = Number(DATA?.analysisProgress?.processedReviews || 0);
   const progressTotal = Number(DATA?.analysisProgress?.totalReviews || slice.kpis.nReviews || 0);
   const progressStage = ["Discovering reviews", "Analysing feedback", "Finding themes", "Building recommendations"][Math.min(3, liveStage)] || "Analysing feedback";
+  const demoResolving = publicDemo && liveRefreshState === "running";
+  const showResolvedKpis = !demoResolving || liveStage >= 1;
+  const showResolvedChart = !demoResolving || liveStage >= 2;
+  const showResolvedBody = !demoResolving || liveStage >= 3;
   return (
     <div className="px-8 py-5">
       <div className="tl-reveal-section flex flex-wrap items-center justify-between gap-4 border-b border-[#DDD6D1] pb-4">
@@ -2428,12 +2463,12 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
               <span className="mx-1.5 text-slate-300">·</span>
               <span className="font-semibold text-[#4B403C]">{slice.kpis.nPhrases}</span> scored phrases
             </span>
-            {!publicDemo && liveRefreshState !== "running" && <button type="button" onClick={onRefreshData} className="inline-flex min-w-[92px] items-center justify-center gap-1.5 rounded-md border border-[#DED6D1] bg-white px-2.5 py-1.5 text-xs font-semibold text-[#4B403C] hover:bg-[#FFF9F6]"><RefreshCw size={13} />Refresh data</button>}
+            {liveRefreshState !== "running" && <button type="button" onClick={onRefreshData} className="inline-flex min-w-[92px] items-center justify-center gap-1.5 rounded-md border border-[#DED6D1] bg-white px-2.5 py-1.5 text-xs font-semibold text-[#4B403C] hover:bg-[#FFF9F6]"><RefreshCw size={13} />Refresh data</button>}
             {liveRefreshState === "running" && <><div className="tl-processing-compact" role="status" aria-live="polite">
               <span className="tl-processing-mark" aria-hidden="true"><i /></span>
-              <span className="min-w-0"><strong>{publicDemo ? "Preparing dashboard" : "Updating review data"}</strong><small>{publicDemo ? `${progressTotal || slice.kpis.nReviews} cached reviews · ${progressStage}` : `${progressTotal || slice.kpis.nReviews} found · ${progressStage}`}</small></span>
-              <span className="tl-processing-time">{publicDemo ? "a few sec" : "~2 min"}</span>
-            </div><InfoPopover attention label="What is happening in the background"><strong className="block text-[11px]">{publicDemo ? "Replaying the analysis workflow" : "Updating the evidence base"}</strong><span className="mt-1 block text-slate-300">{publicDemo ? "This portfolio version assembles a cached, pre-analyzed review snapshot so you can experience the product flow without triggering API calls or external data collection." : "Throughline is collecting public App Store and Google Play reviews, removing duplicates, scoring customer phrases and organizing them into themes. The dashboard updates automatically as each stage finishes."}</span></InfoPopover></>}
+              <span className="min-w-0"><strong>Updating review data</strong><small>{progressTotal || slice.kpis.nReviews} found · {progressStage}</small></span>
+              <span className="tl-processing-time">~2 min</span>
+            </div><InfoPopover attention label="What is happening in the background"><strong className="block text-[11px]">Updating the evidence base</strong><span className="mt-1 block text-slate-300">Throughline is collecting reviews, scoring customer phrases and organizing them into themes. The dashboard resolves progressively as each stage finishes.{publicDemo ? " This portfolio demonstration replays that workflow from a cached snapshot and makes no external calls." : ""}</span></InfoPopover></>}
           </div>
           {(() => {
             const windowMeta = DATA?.ingestion?.window || {};
@@ -2462,14 +2497,14 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
             "the engine is running and its findings are validated" cluster. */}
       </div>
 
-      <div className="tl-reveal-section mt-3"><KpiRow slice={displaySlice} store={store} /></div>
-      <div className="tl-reveal-section mt-3"><WeeklyPulse key={store} weeks={slice.weekly || []} activeWeek={activeWeek} onSelectWeek={setActiveWeek} /></div>
+      <div className="tl-reveal-section mt-3">{showResolvedKpis ? <KpiRow slice={displaySlice} store={store} /> : <KpiLoadingRow />}</div>
+      <div className="tl-reveal-section mt-3">{showResolvedChart ? <WeeklyPulse key={store} weeks={slice.weekly || []} activeWeek={activeWeek} onSelectWeek={setActiveWeek} /> : <WeeklyPulseLoading />}</div>
 
       {/* Matrix left and dominant (70%), Customer Voice right (30%). items-stretch
           so both cards are the same height — tops AND bottoms aligned — reading
           as one coordinated section. (Sticky dropped: it left the panel a
           different height from the matrix, which read as misalignment.) */}
-      <div className="tl-reveal-section mt-4 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-10">
+      {showResolvedBody && <div className="tl-reveal-section mt-4 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-10">
         <div className="h-full lg:col-span-7">
           <ThemeMatrix slice={displaySlice} reviewsById={reviewsById}
             activeTopic={resolvedTopic} onSelectTopic={setActiveTopic} />
@@ -2478,21 +2513,21 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
           <CustomerVoice slice={displaySlice} reviewsById={reviewsById}
             topicName={resolvedTopic} isDefault={!activeTopic} />
         </div>
-      </div>
+      </div>}
 
-      <div className="tl-reveal-section mt-4"><InsightGenerator publicDemo={publicDemo} state={insightState} onGenerate={generateInsights} reviewCount={displaySlice.kpis.nReviews} /></div>
+      {showResolvedBody && <div className="tl-reveal-section mt-4"><InsightGenerator publicDemo={publicDemo} state={insightState} onGenerate={generateInsights} reviewCount={displaySlice.kpis.nReviews} /></div>}
 
       {/* Lower dashboard as one narrative, two rows:
           Row 1 — what we found (Key Findings) → what to do (Next Steps).
           Row 2 — what evidence explains it (Platform & Emotion) → why we
           trust it (Model Validation). Both rows are the same 50/50 grid so
           their outer edges line up and the four cards read as one section. */}
-      {insightState === "ready" && showSteps ? (
+      {showResolvedBody && insightState === "ready" && showSteps ? (
         <div className="tl-reveal-section mt-4 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-2">
           <KeyFindings slice={displaySlice} />
           <NextSteps onSelect={setActiveStepIdx} activeIdx={activeStepIdx} store={store} />
         </div>
-      ) : insightState === "ready" ? (
+      ) : showResolvedBody && insightState === "ready" ? (
         <div className="tl-reveal-section mt-4"><KeyFindings slice={displaySlice} /></div>
       ) : null}
 
@@ -2713,7 +2748,11 @@ export default function App() {
       await new Promise((resolve) => window.setTimeout(resolve, 430));
       if (demoRunRef.current !== run) return;
       setLiveReady(true);
-      await new Promise((resolve) => window.setTimeout(resolve, 1850));
+      setLiveStage(0);
+      if (!await advance(1050, 1, "Analysing feedback…")) return;
+      if (!await advance(1250, 2, "Finding themes…")) return;
+      if (!await advance(1350, 3, "Building recommendations…")) return;
+      await new Promise((resolve) => window.setTimeout(resolve, 950));
       if (demoRunRef.current !== run) return;
       setLiveRefreshState("complete");
       setLiveRefreshMessage("Cached intelligence ready");
