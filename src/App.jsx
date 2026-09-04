@@ -847,13 +847,22 @@ function KpiRow({ slice, store }) {
   );
 }
 
-function KpiLoadingRow() {
+function KpiLoadingRow({ slice }) {
+  const knownRating = slice?.kpis?.avgRating == null ? "—" : Number(slice.kpis.avgRating).toFixed(2);
+  const knownReviews = Number(slice?.kpis?.nReviews || 0);
+  const cards = [
+    { label: "Avg star rating", value: knownRating, note: "Published rating available" },
+    { label: "Net sentiment", value: null, note: "Scoring customer phrases" },
+    { label: "Total reviews", value: knownReviews, note: "Reviews collected" },
+    { label: "Analysis confidence", value: null, note: "Calculating alignment" },
+  ];
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4" aria-label="Dashboard metrics are loading">
-      {["Avg star rating", "Net sentiment", "Total reviews", "Analysis confidence"].map((label, index) => (
-        <Card key={label} className="tl-kpi-loading px-4 py-3" style={{ "--tl-load-index": index }}>
+      {cards.map(({ label, value, note }, index) => (
+        <Card key={label} className={`tl-kpi-loading px-4 py-3 ${value !== null ? "is-known" : ""}`} style={{ "--tl-load-index": index }}>
           <span className={EYEBROW} style={{ color: INK2 }}>{label}</span>
-          <div className="tl-kpi-loading-value" aria-hidden="true"><i /><i /><i /></div>
+          {value !== null ? <div className="tl-kpi-loading-known">{value}</div> : <div className="tl-kpi-loading-value" aria-label={note}><i /><i /><i /></div>}
+          <div className="tl-kpi-loading-note">{note}</div>
           <div className="tl-kpi-loading-signal" aria-hidden="true"><span /></div>
         </Card>
       ))}
@@ -2497,7 +2506,7 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
             "the engine is running and its findings are validated" cluster. */}
       </div>
 
-      <div className="tl-reveal-section mt-3">{showResolvedKpis ? <KpiRow slice={displaySlice} store={store} /> : <KpiLoadingRow />}</div>
+      <div className="tl-reveal-section mt-3">{showResolvedKpis ? <KpiRow slice={displaySlice} store={store} /> : <KpiLoadingRow slice={displaySlice} />}</div>
       <div className="tl-reveal-section mt-3">{showResolvedChart ? <WeeklyPulse key={store} weeks={slice.weekly || []} activeWeek={activeWeek} onSelectWeek={setActiveWeek} /> : <WeeklyPulseLoading />}</div>
 
       {/* Matrix left and dominant (70%), Customer Voice right (30%). items-stretch
@@ -2749,10 +2758,10 @@ export default function App() {
       if (demoRunRef.current !== run) return;
       setLiveReady(true);
       setLiveStage(0);
-      if (!await advance(1050, 1, "Analysing feedback…")) return;
-      if (!await advance(1250, 2, "Finding themes…")) return;
-      if (!await advance(1350, 3, "Building recommendations…")) return;
-      await new Promise((resolve) => window.setTimeout(resolve, 950));
+      if (!await advance(2000, 1, "Analysing feedback…")) return;
+      if (!await advance(2000, 2, "Finding themes…")) return;
+      if (!await advance(900, 3, "Building recommendations…")) return;
+      await new Promise((resolve) => window.setTimeout(resolve, 700));
       if (demoRunRef.current !== run) return;
       setLiveRefreshState("complete");
       setLiveRefreshMessage("Cached intelligence ready");
@@ -2805,6 +2814,34 @@ export default function App() {
       setLiveRefreshState("error");
       setLiveError(error?.message || "Live analysis could not start.");
     }
+  };
+
+  const refreshDashboard = async () => {
+    if (!PUBLIC_DEMO) {
+      await startAnalysis(activeSlug);
+      return;
+    }
+    const run = ++demoRunRef.current;
+    setLiveError("");
+    setLiveStage(0);
+    setLiveRefreshState("running");
+    setLiveRefreshMessage("Discovering reviews…");
+    const advance = async (delay, stage, message) => {
+      await new Promise((resolve) => window.setTimeout(resolve, delay));
+      if (demoRunRef.current !== run) return false;
+      setLiveStage(stage);
+      setLiveRefreshMessage(message);
+      return true;
+    };
+    if (!await advance(2000, 1, "Analysing feedback…")) return;
+    if (!await advance(2000, 2, "Finding themes…")) return;
+    if (!await advance(900, 3, "Building recommendations…")) return;
+    await new Promise((resolve) => window.setTimeout(resolve, 700));
+    if (demoRunRef.current !== run) return;
+    setLiveRefreshState("complete");
+    setLiveRefreshMessage("Intelligence updated");
+    await new Promise((resolve) => window.setTimeout(resolve, 900));
+    if (demoRunRef.current === run) setLiveRefreshState("idle");
   };
 
   useEffect(() => {
@@ -2934,7 +2971,7 @@ export default function App() {
     <div className={`${entryStage === "revealing" ? "tl-dashboard-reveal " : ""}min-h-screen bg-[#F6F3F1] font-sans text-[#172033] antialiased`}>
       <div className="tl-dashboard-shell">
         <TopHeader query={query} setQuery={setQuery} />
-        {DATA?.evidenceOnly ? <EvidencePreview liveRefreshState={liveRefreshState} /> : <DashboardView publicDemo={PUBLIC_DEMO} store={store} setStore={setStore} reviewsById={reviewsById} liveRefreshState={liveRefreshState} liveRefreshMessage={liveRefreshMessage} liveStage={liveStage} onRefreshData={() => startAnalysis(activeSlug)} onExtendWindow={(days) => startAnalysis(activeSlug, { windowDays: days })} />}
+        {DATA?.evidenceOnly ? <EvidencePreview liveRefreshState={liveRefreshState} /> : <DashboardView publicDemo={PUBLIC_DEMO} store={store} setStore={setStore} reviewsById={reviewsById} liveRefreshState={liveRefreshState} liveRefreshMessage={liveRefreshMessage} liveStage={liveStage} onRefreshData={refreshDashboard} onExtendWindow={(days) => startAnalysis(activeSlug, { windowDays: days })} />}
         <CompanyBattleCard publicDemo={PUBLIC_DEMO} activeSlug={activeSlug} companies={runtimeCompanies} onCompanyReady={(slug, data) => setRuntimeCompanies((current) => ({ ...current, [slug]: data }))} />
       </div>
       {entryStage === "revealing" && <DashboardTransitionOverlay />}
