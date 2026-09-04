@@ -12,6 +12,58 @@ import CompanyBattleCard from "./CompanyBattleCard";
 
 const PUBLIC_DEMO = true;
 
+function isoDay(date) {
+  return date.toISOString().slice(0, 10);
+}
+
+function shortDay(date) {
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+}
+
+/* Older cached snapshots pre-date the Weekly Pulse export. Build the same
+   four rolling periods from their review evidence at load time so the public
+   demo has one consistent dashboard contract across every company. */
+function weeklyFromReviews(reviews = []) {
+  const dated = reviews.filter((review) => review?.date && !Number.isNaN(new Date(`${review.date}T00:00:00Z`).getTime()));
+  if (!dated.length) return [];
+  const maxDate = new Date(Math.max(...dated.map((review) => new Date(`${review.date}T00:00:00Z`).getTime())));
+  return Array.from({ length: 4 }, (_, index) => {
+    const end = new Date(maxDate);
+    end.setUTCDate(maxDate.getUTCDate() - ((3 - index) * 7));
+    const start = new Date(end);
+    start.setUTCDate(end.getUTCDate() - 6);
+    const selected = dated.filter((review) => {
+      const date = new Date(`${review.date}T00:00:00Z`);
+      return date >= start && date <= end;
+    });
+    const ratings = selected.map((review) => Number(review.rating)).filter(Number.isFinite);
+    const phrases = selected.flatMap((review) => review.phrases || []);
+    const scores = phrases.map((phrase) => Number(phrase.score)).filter(Number.isFinite);
+    const positive = scores.filter((score) => score > .2).length;
+    const negative = scores.filter((score) => score < -.2).length;
+    return {
+      start: isoDay(start),
+      end: isoDay(end),
+      label: `${shortDay(start)}–${shortDay(end)}`,
+      nReviews: selected.length,
+      avgRating: ratings.length ? ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length : null,
+      nss: scores.length ? ((positive - negative) / scores.length) * 100 : null,
+    };
+  });
+}
+
+function normalizeDemoCompany(rawData, slug) {
+  let data = rawData;
+  if (slug === "elevenlabs") {
+    data = JSON.parse(JSON.stringify(rawData).replaceAll("ElevenLabs", "ElevenReader"));
+  }
+  const scopes = Object.fromEntries(Object.entries(data.scopes || {}).map(([scopeId, scope]) => {
+    const scopedReviews = scopeId === "all" ? data.reviews : (data.reviews || []).filter((review) => review.source === scopeId);
+    return [scopeId, { ...scope, weekly: scope.weekly?.length ? scope.weekly : weeklyFromReviews(scopedReviews) }];
+  }));
+  return { ...data, scopes };
+}
+
 /* Every company analyzed by export_app_data.py lands in its own
    src/data/<slug>.json. Vite bundles all of them at build time (or picks up
    a new one on the next dev-server reload); no server, no runtime fetch. The
@@ -23,7 +75,7 @@ const COMPANY_MODULES = import.meta.glob("./data/*.json", { eager: true });
 const COMPANIES = Object.fromEntries(
   Object.entries(COMPANY_MODULES).map(([path, mod]) => {
     const slug = path.match(/([^/]+)\.json$/)[1];
-    return [slug, mod.default || mod];
+    return [slug, normalizeDemoCompany(mod.default || mod, slug)];
   })
 );
 
@@ -2322,7 +2374,7 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
   const generateInsights = async () => {
     setInsightState("generating");
     if (publicDemo) {
-      window.setTimeout(() => setInsightState("ready"), 720);
+      window.setTimeout(() => setInsightState("ready"), 1350);
       return;
     }
     try {
@@ -2379,9 +2431,9 @@ function DashboardView({ store, setStore, reviewsById, liveRefreshState = "idle"
             {!publicDemo && liveRefreshState !== "running" && <button type="button" onClick={onRefreshData} className="inline-flex min-w-[92px] items-center justify-center gap-1.5 rounded-md border border-[#DED6D1] bg-white px-2.5 py-1.5 text-xs font-semibold text-[#4B403C] hover:bg-[#FFF9F6]"><RefreshCw size={13} />Refresh data</button>}
             {liveRefreshState === "running" && <><div className="tl-processing-compact" role="status" aria-live="polite">
               <span className="tl-processing-mark" aria-hidden="true"><i /></span>
-              <span className="min-w-0"><strong>Updating review data</strong><small>{progressTotal || slice.kpis.nReviews} found · {progressStage}</small></span>
-              <span className="tl-processing-time">~2 min</span>
-            </div><InfoPopover attention label="What is happening in the background"><strong className="block text-[11px]">Updating the evidence base</strong><span className="mt-1 block text-slate-300">Throughline is collecting public App Store and Google Play reviews, removing duplicates, scoring customer phrases and organizing them into themes. The dashboard updates automatically as each stage finishes.</span></InfoPopover></>}
+              <span className="min-w-0"><strong>{publicDemo ? "Preparing dashboard" : "Updating review data"}</strong><small>{publicDemo ? `${progressTotal || slice.kpis.nReviews} cached reviews · ${progressStage}` : `${progressTotal || slice.kpis.nReviews} found · ${progressStage}`}</small></span>
+              <span className="tl-processing-time">{publicDemo ? "a few sec" : "~2 min"}</span>
+            </div><InfoPopover attention label="What is happening in the background"><strong className="block text-[11px]">{publicDemo ? "Replaying the analysis workflow" : "Updating the evidence base"}</strong><span className="mt-1 block text-slate-300">{publicDemo ? "This portfolio version assembles a cached, pre-analyzed review snapshot so you can experience the product flow without triggering API calls or external data collection." : "Throughline is collecting public App Store and Google Play reviews, removing duplicates, scoring customer phrases and organizing them into themes. The dashboard updates automatically as each stage finishes."}</span></InfoPopover></>}
           </div>
           {(() => {
             const windowMeta = DATA?.ingestion?.window || {};
@@ -2630,6 +2682,7 @@ export default function App() {
   const [liveReviewSnippets, setLiveReviewSnippets] = useState([]);
   const [pendingCompanyLabel, setPendingCompanyLabel] = useState("");
   const [pendingHasSnapshot, setPendingHasSnapshot] = useState(false);
+  const demoRunRef = useRef(0);
   const DATA = runtimeCompanies[activeSlug];
   const NARR = (DATA && DATA.narrative) || {};
 
@@ -2637,9 +2690,35 @@ export default function App() {
     const known = runtimeCompanies[companyQuery];
     if (PUBLIC_DEMO) {
       if (!known) return;
+      const run = ++demoRunRef.current;
       setActiveSlug(companyQuery);
-      setLiveRefreshState("idle");
-      setEntryStage("revealing");
+      setPendingCompanyLabel(known.company || companyQuery);
+      setPendingHasSnapshot(true);
+      setLiveReady(false);
+      setLiveError("");
+      setLiveStage(0);
+      setLiveRefreshState("running");
+      setLiveRefreshMessage("Preparing cached portfolio evidence…");
+      setEntryStage("analyzing");
+      const advance = async (delay, stage, message) => {
+        await new Promise((resolve) => window.setTimeout(resolve, delay));
+        if (demoRunRef.current !== run) return false;
+        setLiveStage(stage);
+        setLiveRefreshMessage(message);
+        return true;
+      };
+      if (!await advance(620, 1, "Structuring cached review evidence…")) return;
+      if (!await advance(650, 2, "Resolving themes and sentiment…")) return;
+      if (!await advance(690, 3, "Assembling the dashboard…")) return;
+      await new Promise((resolve) => window.setTimeout(resolve, 430));
+      if (demoRunRef.current !== run) return;
+      setLiveReady(true);
+      await new Promise((resolve) => window.setTimeout(resolve, 1850));
+      if (demoRunRef.current !== run) return;
+      setLiveRefreshState("complete");
+      setLiveRefreshMessage("Cached intelligence ready");
+      await new Promise((resolve) => window.setTimeout(resolve, 900));
+      if (demoRunRef.current === run) setLiveRefreshState("idle");
       return;
     }
     if (known) setActiveSlug(companyQuery);
@@ -2806,6 +2885,7 @@ export default function App() {
         onComplete={() => setEntryStage("revealing")}
         backendStage={liveStage}
         reviewSnippets={liveReviewSnippets}
+        demoMode={PUBLIC_DEMO}
       />
     );
   }

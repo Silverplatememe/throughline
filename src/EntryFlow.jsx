@@ -141,17 +141,17 @@ function ReferenceSignalGraphic({ compact = false, snippets = [] }) {
   );
 }
 
-function SignatureSignalLoader({ company, activeStep = 0, elapsedSeconds = 0, reviewSnippets = [], sourceLabels = [], ready = false }) {
+function SignatureSignalLoader({ company, activeStep = 0, elapsedSeconds = 0, reviewSnippets = [], sourceLabels = [], ready = false, demoMode = false }) {
   const count = reviewSnippets?.length || 0;
   const uiStep = ready ? 4 : activeStep === 0 ? 0 : activeStep === 1 ? 1 : activeStep === 2 ? 2 : 3;
   const milestones = [
     { icon: Database, title: "Sources connected", detail: sourceLabels.length ? sourceLabels.map(s=>s.label).join(" · ") : "Google Play · App Store" },
-    { icon: Search, title: "Finding reviews", detail: count ? `${count}+ reviews found` : "Public feedback arriving" },
+    { icon: Search, title: "Finding reviews", detail: count ? `${count}+ reviews found` : demoMode ? "Cached review snapshot loading" : "Public feedback arriving" },
     { icon: ScanSearch, title: "Extracting signals", detail: "Customer signals identified" },
     { icon: LayoutDashboard, title: "Themes emerging", detail: "Themes taking shape" },
     { icon: Check, title: "Initial view ready", detail: "Almost there…" },
   ];
-  const eta = elapsedSeconds < 40 ? "First signal expected in ~25–40s" : elapsedSeconds < 70 ? "More evidence than expected · still processing" : "Finishing the first signal · taking longer than usual";
+  const eta = demoMode ? "Preparing cached demonstration · a few seconds" : elapsedSeconds < 40 ? "First signal expected in ~25–40s" : elapsedSeconds < 70 ? "More evidence than expected · still processing" : "Finishing the first signal · taking longer than usual";
   return (
     <div className="tl-reference-loader">
       <div className="tl-reference-brand">Throughline</div>
@@ -172,7 +172,7 @@ function SignatureSignalLoader({ company, activeStep = 0, elapsedSeconds = 0, re
         })}
       </div>
       <div className="tl-reference-timing"><strong>{elapsedSeconds}s</strong><span>elapsed</span><i/><span>{eta}</span></div>
-      <div className="tl-reference-trust"><ShieldCheck size={15}/><span>Secure · Private · Compliant</span></div>
+      <div className="tl-reference-trust"><ShieldCheck size={15}/><span>{demoMode ? "Cached portfolio data · no external calls" : "Secure · Private · Compliant"}</span></div>
     </div>
   );
 }
@@ -270,7 +270,7 @@ export function SearchPage({ companies, onSelectCompany, demoMode = false }) {
 
   return (
     <div className="tl-search-reference min-h-screen font-sans text-slate-900 antialiased">
-      <header className="tl-search-reference-header"><strong>Throughline</strong>{demoMode && <span className="tl-demo-label">Working prototype · portfolio demo</span>}</header>
+      <header className="tl-search-reference-header"><strong>Throughline</strong>{demoMode && <span className="tl-demo-label">Portfolio demo · v2</span>}</header>
       <main className="tl-search-reference-main">
         <ReferenceSignalGraphic compact />
         <section className="tl-search-reference-copy">
@@ -304,10 +304,9 @@ const STEPS = [
   "Building your dashboard",
 ];
 
-export function AnalysisLoading({ company, data, ready = false, error = "", onComplete, onBack, backendStage = 0, reviewSnippets = [] }) {
+export function AnalysisLoading({ company, data, ready = false, error = "", onComplete, onBack, backendStage = 0, reviewSnippets = [], demoMode = false }) {
   const [activeStep, setActiveStep] = useState(0);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
-  const isFirstLoad = !data;
 
   useEffect(() => {
     setActiveStep(0);
@@ -319,13 +318,13 @@ export function AnalysisLoading({ company, data, ready = false, error = "", onCo
   }, [backendStage]);
 
   useEffect(() => {
-    if (!isFirstLoad || error) return undefined;
+    if (error) return undefined;
     const started = Date.now();
     const tick = () => setElapsedSeconds(Math.floor((Date.now() - started) / 1000));
     tick();
     const timer = window.setInterval(tick, 250);
     return () => window.clearInterval(timer);
-  }, [company, isFirstLoad, error]);
+  }, [company, error]);
 
   useEffect(() => {
     if (!ready || activeStep < 3) return undefined;
@@ -359,6 +358,7 @@ export function AnalysisLoading({ company, data, ready = false, error = "", onCo
         reviewSnippets={reviewSnippets}
         sourceLabels={sourceLabels}
         ready={ready}
+        demoMode={demoMode}
       />
       {error ? (
         <section className="tl-loading-error tl-signature-error" aria-live="assertive">

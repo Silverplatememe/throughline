@@ -1,4 +1,4 @@
-# Throughline
+# Throughline — Portfolio Demo v2
 
 Evidence-led app-review intelligence for product and customer-experience teams.
 
@@ -6,13 +6,15 @@ Throughline is an independently designed working prototype that explores how pub
 
 ## Public portfolio demonstration
 
-This repository is the frontend-only portfolio edition. It uses cached demonstration datasets so the experience is dependable, fast, and safe to explore without API credentials or model charges.
+This repository is the frontend-only portfolio edition. It uses cached demonstration datasets so the experience is dependable, fast, and safe to explore without API credentials or model charges. The included snapshots cover ElevenReader, Klarna, Lovable, Storytel, and OK/Q8.
+
+Company selection deliberately replays the product's analysis stages before the cached dashboard resolves. This preserves the intended service experience while remaining transparent that no live collection or model call occurs in the public build.
 
 The private working prototype also supports live review collection, background phrase scoring, theme discovery, and on-demand executive synthesis. Those services and credentials are intentionally excluded here.
 
 ## Product flow
 
-1. Select an available company.
+1. Select an available company and follow the staged analysis handoff.
 2. Explore rating, sentiment, volume, confidence, and weekly movement.
 3. Inspect prioritized themes and supporting customer evidence.
 4. Reveal a cached executive synthesis and ranked actions.
@@ -53,4 +55,3 @@ Import this repository into Vercel. Vercel should detect Vite automatically.
 ## Prototype status
 
 This is a portfolio prototype, not a production SaaS service. A production implementation would add authenticated tenancy, durable job processing, model and source rate limits, observability, billing controls, analytical evaluation, and formal data-retention policies.
-

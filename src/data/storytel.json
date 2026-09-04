@@ -1,0 +1,3572 @@
+{
+  "company": "Storytel",
+  "generated": "03 Sep 2026",
+  "ingestion": {
+    "mode": "live_phase_1",
+    "company_slug": "storytel",
+    "generated_at": "2026-09-03T17:24:25.234313+00:00",
+    "sources": [
+      "google_play",
+      "app_store"
+    ],
+    "window": {
+      "requested_days": 7,
+      "effective_days": 7,
+      "expanded": false,
+      "reason": "enough_recent_evidence",
+      "review_count": 76,
+      "minimum_reviews": 25
+    },
+    "source_status": {
+      "google_play": {
+        "ok": true,
+        "count": 100,
+        "error": null,
+        "cached": false
+      },
+      "app_store": {
+        "ok": true,
+        "count": 150,
+        "error": null,
+        "cached": false
+      }
+    },
+    "review_fingerprint": "342215d9e03e405d0bab"
+  },
+  "headline": null,
+  "sources": [
+    {
+      "id": "all",
+      "label": "All Sources",
+      "short": "All"
+    },
+    {
+      "id": "google_play",
+      "label": "Google Play",
+      "short": "Google Play"
+    },
+    {
+      "id": "app_store",
+      "label": "App Store",
+      "short": "App Store"
+    }
+  ],
+  "scopes": {
+    "all": {
+      "kpis": {
+        "avgRating": 4.55,
+        "nss": 16.2,
+        "nReviews": 76,
+        "nPhrases": 37,
+        "agreement": 0.88,
+        "agreementN": 18
+      },
+      "themes": [
+        {
+          "theme": "Pricing and value proposition",
+          "summary": "Customers appreciate the pricing as competitive and often cheaper than Audible, with some noting savings and good value despite slightly higher per-credit costs. Free trial and free credit opportunities are mentioned positively and negatively.",
+          "action": "Audit free trial and credit redemption flows to ensure cancellation and billing processes are transparent and prevent unintended charges; highlight pricing advantage in onboarding.",
+          "confidence": "high",
+          "volume": 10,
+          "sentiment": -0.464,
+          "impact": -0.099,
+          "impactReliable": true,
+          "impactRatedN": 10,
+          "significant": true,
+          "effect": "large",
+          "ci95": [
+            -0.849,
+            -0.08
+          ],
+          "nSentences": 7,
+          "verbatimIds": [
+            12,
+            18,
+            23,
+            32,
+            40,
+            41,
+            55,
+            63,
+            69,
+            73
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 6,
+            "neutral": 0
+          },
+          "priority": "Investigate",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Navigation and search functionality",
+          "summary": "Customers appreciate easy navigation in general, but several report that search is vague or difficult to use for finding specific titles, genres, or book sections. Some request chapter-level navigation instead of track-based grouping.",
+          "action": "Improve search filtering and auto-complete; add chapter-level navigation option; add tagging/troupe filtering for genre discovery.",
+          "confidence": "medium",
+          "volume": 6,
+          "sentiment": 0.263,
+          "impact": -0.047,
+          "impactReliable": true,
+          "impactRatedN": 6,
+          "significant": false,
+          "effect": "negligible",
+          "ci95": [
+            -0.235,
+            0.76
+          ],
+          "nSentences": 8,
+          "verbatimIds": [
+            15,
+            19,
+            26,
+            43,
+            50,
+            65
+          ],
+          "distribution": {
+            "positive": 5,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Book selection and catalog",
+          "summary": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books.",
+          "action": "Audit the catalog for gaps in popular authors and series; establish partnerships or licensing agreements to expand availability in high-demand segments.",
+          "confidence": "high",
+          "volume": 22,
+          "sentiment": 0.15,
+          "impact": -0.003,
+          "impactReliable": true,
+          "impactRatedN": 22,
+          "significant": false,
+          "effect": "negligible",
+          "ci95": [
+            -0.465,
+            0.765
+          ],
+          "nSentences": 9,
+          "verbatimIds": [
+            4,
+            6,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            24,
+            25,
+            27,
+            28,
+            35,
+            36,
+            40,
+            43,
+            44,
+            45,
+            55,
+            56,
+            59,
+            71
+          ],
+          "distribution": {
+            "positive": 5,
+            "negative": 4,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Playback features and controls",
+          "summary": "Customers appreciate features like adjustable playback speed, sleep timer, and the ability to skip chapters or rewind a few seconds upon resuming. Some wish for progress percentage display or easier chapter navigation.",
+          "action": "Add a visual progress bar showing percentage of book completion; ensure chapter navigation is easily accessible from playback screen.",
+          "confidence": "medium",
+          "volume": 5,
+          "sentiment": -0.01,
+          "impact": 0.004,
+          "impactReliable": true,
+          "impactRatedN": 5,
+          "significant": false,
+          "effect": "small",
+          "ci95": [
+            -0.761,
+            0.741
+          ],
+          "nSentences": 5,
+          "verbatimIds": [
+            51,
+            55,
+            61,
+            65,
+            67
+          ],
+          "distribution": {
+            "positive": 2,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": {
+            "source": "app_store",
+            "label": "App Store",
+            "count": 5,
+            "total": 5
+          }
+        },
+        {
+          "theme": "Overall app experience",
+          "summary": "Customers frequently praise the app for being easy to use, straightforward, and helpful for their audiobook listening needs. Some express concern about overall functionality, complexity, or feel the app is rudimentary compared to alternatives.",
+          "action": "Conduct a detailed UX audit comparing the app interface to Audible and similar competitors, focusing on reducing perceived 'clunkiness' and adding polish to core navigation flows.",
+          "confidence": "high",
+          "volume": 42,
+          "sentiment": 0.181,
+          "impact": 0.2,
+          "impactReliable": true,
+          "impactRatedN": 42,
+          "significant": false,
+          "effect": "negligible",
+          "ci95": [
+            -0.082,
+            0.443
+          ],
+          "nSentences": 18,
+          "verbatimIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            13,
+            16,
+            17,
+            20,
+            21,
+            22,
+            24,
+            28,
+            29,
+            30,
+            31,
+            32,
+            37,
+            39,
+            41,
+            42,
+            44,
+            45,
+            47,
+            49,
+            50,
+            53,
+            54,
+            56,
+            57,
+            59,
+            65,
+            66,
+            68,
+            72,
+            73,
+            74,
+            75,
+            76
+          ],
+          "distribution": {
+            "positive": 10,
+            "negative": 7,
+            "neutral": 1
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Bookmark management",
+          "summary": "One customer reports significant friction with the bookmark system, noting lag and the need to manually delete dozens of bookmarks when revisiting a book, and questions whether bookmarks are stored locally or in the cloud.",
+          "action": "Implement a 'delete all bookmarks' feature and optimize bookmark storage and retrieval performance; document bookmark storage architecture for user clarity.",
+          "confidence": "medium",
+          "volume": 1,
+          "sentiment": -0.267,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 1,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 3,
+          "verbatimIds": [
+            10
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 2,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Car connectivity and playback controls",
+          "summary": "Customers value the ability to connect to CarPlay and car speakers, though some experience inconsistent Bluetooth connections and note that playback speed cannot be adjusted from the car interface.",
+          "action": "Debug Bluetooth/CarPlay connection reliability; enable playback speed adjustment from car interface; test with major car models.",
+          "confidence": "high",
+          "volume": 4,
+          "sentiment": null,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 0,
+          "verbatimIds": [
+            54,
+            60,
+            62,
+            64
+          ],
+          "distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": {
+            "source": "app_store",
+            "label": "App Store",
+            "count": 4,
+            "total": 4
+          }
+        },
+        {
+          "theme": "Audio quality and narration",
+          "summary": "Customers praise audio quality and voice narration as clear and easy to understand. No significant complaints about audio are reported.",
+          "action": "Continue to monitor audio quality standards and consider highlighting narration quality in marketing materials.",
+          "confidence": "medium",
+          "volume": 4,
+          "sentiment": 0.767,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 3,
+          "verbatimIds": [
+            34,
+            40,
+            43,
+            67
+          ],
+          "distribution": {
+            "positive": 3,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": {
+            "source": "app_store",
+            "label": "App Store",
+            "count": 4,
+            "total": 4
+          }
+        },
+        {
+          "theme": "Web and mobile synchronization",
+          "summary": "Multiple customers report that syncing between web and phone versions is unreliable or 'wonky,' creating friction when switching between devices.",
+          "action": "Audit and fix sync architecture between web and mobile apps; add user-facing sync status indicators and error messages.",
+          "confidence": "high",
+          "volume": 2,
+          "sentiment": 0.35,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 2,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            38,
+            46
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "VIP section and membership tiers",
+          "summary": "Customers mention the VIP section, with mixed feedback: some find it good, while others note that while it has a decent number of titles, few are personally relevant to them.",
+          "action": "Review VIP tier curation and personalization; consider adding preference-based recommendations to increase relevance.",
+          "confidence": "low",
+          "volume": 2,
+          "sentiment": -0.017,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 2,
+          "significant": false,
+          "effect": "small",
+          "ci95": [
+            -0.514,
+            0.481
+          ],
+          "nSentences": 6,
+          "verbatimIds": [
+            8,
+            16
+          ],
+          "distribution": {
+            "positive": 2,
+            "negative": 3,
+            "neutral": 1
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "User interface clarity and design",
+          "summary": "Customers note that the interface is generally easy to use but could be more polished or intuitive. Some request a visual bookshelf feature or clearer icon meanings.",
+          "action": "Conduct a design audit of icon clarity and labeling; consider adding an optional visual bookshelf library view; benchmark UI against Audible and Libby.",
+          "confidence": "medium",
+          "volume": 4,
+          "sentiment": -0.014,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": false,
+          "effect": "small",
+          "ci95": [
+            -0.513,
+            0.484
+          ],
+          "nSentences": 7,
+          "verbatimIds": [
+            32,
+            48,
+            50,
+            65
+          ],
+          "distribution": {
+            "positive": 3,
+            "negative": 4,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": {
+            "source": "app_store",
+            "label": "App Store",
+            "count": 4,
+            "total": 4
+          }
+        }
+      ],
+      "emotions": [
+        {
+          "label": "delight",
+          "count": 11,
+          "pct": 29.7,
+          "valence": "pos"
+        },
+        {
+          "label": "frustration",
+          "count": 7,
+          "pct": 18.9,
+          "valence": "neg"
+        },
+        {
+          "label": "disappointment",
+          "count": 6,
+          "pct": 16.2,
+          "valence": "neg"
+        },
+        {
+          "label": "trust",
+          "count": 4,
+          "pct": 10.8,
+          "valence": "pos"
+        },
+        {
+          "label": "relief",
+          "count": 3,
+          "pct": 8.1,
+          "valence": "pos"
+        },
+        {
+          "label": "indifference",
+          "count": 2,
+          "pct": 5.4,
+          "valence": "neu"
+        },
+        {
+          "label": "confusion",
+          "count": 2,
+          "pct": 5.4,
+          "valence": "neg"
+        },
+        {
+          "label": "anger",
+          "count": 1,
+          "pct": 2.7,
+          "valence": "neg"
+        },
+        {
+          "label": "anxiety",
+          "count": 1,
+          "pct": 2.7,
+          "valence": "neg"
+        }
+      ],
+      "valenceSplit": {
+        "pos": 48.6,
+        "neu": 5.4,
+        "neg": 45.9
+      },
+      "scatter": [
+        {
+          "r": 5,
+          "s": 0.6
+        },
+        {
+          "r": 5,
+          "s": 0.7
+        },
+        {
+          "r": 4,
+          "s": -0.017
+        },
+        {
+          "r": 3,
+          "s": -0.267
+        },
+        {
+          "r": 4,
+          "s": 0.65
+        },
+        {
+          "r": 2,
+          "s": -0.65
+        },
+        {
+          "r": 5,
+          "s": 0.7
+        },
+        {
+          "r": 2,
+          "s": -0.8
+        },
+        {
+          "r": 3,
+          "s": 0.55
+        },
+        {
+          "r": 3,
+          "s": -0.025
+        },
+        {
+          "r": 5,
+          "s": 0.825
+        },
+        {
+          "r": 5,
+          "s": 0.8
+        },
+        {
+          "r": 5,
+          "s": 0.867
+        },
+        {
+          "r": 4,
+          "s": 0.35
+        },
+        {
+          "r": 4,
+          "s": 0.75
+        },
+        {
+          "r": 5,
+          "s": 0.9
+        },
+        {
+          "r": 3,
+          "s": -0.01
+        },
+        {
+          "r": 1,
+          "s": -0.625
+        }
+      ],
+      "painPoints": [
+        {
+          "quote": "not a good choice if your chasing your authors,not looked after",
+          "store": "Google Play",
+          "rating": 2,
+          "score": -0.8,
+          "tag": "Book selection and catalog",
+          "themeVolume": 22,
+          "themeImpact": -0.003,
+          "whyItMatters": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books."
+        },
+        {
+          "quote": "Poor library range. Expensive for 1 credit. Stick with Audible",
+          "store": "Google Play",
+          "rating": 2,
+          "score": -0.65,
+          "tag": "Book selection and catalog",
+          "themeVolume": 22,
+          "themeImpact": -0.003,
+          "whyItMatters": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books."
+        },
+        {
+          "quote": "If you do the free trial and cancel it they will still charge you for a month even if you get confirmation of the cancellation! Just be aware!",
+          "store": "App Store",
+          "rating": 1,
+          "score": -0.62,
+          "tag": "Pricing and value proposition",
+          "themeVolume": 10,
+          "themeImpact": -0.099,
+          "whyItMatters": "Customers appreciate the pricing as competitive and often cheaper than Audible, with some noting savings and good value despite slightly higher per-credit costs. Free trial and free credit opportunities are mentioned positively and negatively."
+        }
+      ],
+      "untagged": {
+        "count": 5,
+        "pct": 6.6,
+        "meanSentiment": 0.825,
+        "examples": [
+          "I was able to get an audiobook I was specifically looking fo",
+          "I can listen to all my favorite oils while I work. It’s amaz"
+        ]
+      },
+      "validation": {
+        "testable": true,
+        "n": 18,
+        "spearman_rho": 0.88,
+        "p_value": 0.0,
+        "interpretation": "Strong agreement with star ratings — scoring prompt looks sound."
+      },
+      "omnibus": {
+        "testable": true,
+        "test": "Kruskal-Wallis H",
+        "h_statistic": 8.057,
+        "p_value": 0.23396,
+        "significant": false,
+        "interpretation": "No statistically detectable difference between themes — per-theme rankings below may be noise."
+      },
+      "trend": {
+        "comparable": false,
+        "note": "Not enough data spanning two 7-day periods (37 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+      }
+    },
+    "google_play": {
+      "kpis": {
+        "avgRating": 4.48,
+        "nss": -5.6,
+        "nReviews": 31,
+        "nPhrases": 18,
+        "agreement": null,
+        "agreementN": null
+      },
+      "themes": [
+        {
+          "theme": "Book selection and catalog",
+          "summary": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books.",
+          "action": "Audit the catalog for gaps in popular authors and series; establish partnerships or licensing agreements to expand availability in high-demand segments.",
+          "confidence": "high",
+          "volume": 12,
+          "sentiment": -0.688,
+          "impact": -0.042,
+          "impactReliable": true,
+          "impactRatedN": 12,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 4,
+          "verbatimIds": [
+            4,
+            6,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            24,
+            25,
+            27,
+            28
+          ],
+          "distribution": {
+            "positive": 0,
+            "negative": 4,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Overall app experience",
+          "summary": "Customers frequently praise the app for being easy to use, straightforward, and helpful for their audiobook listening needs. Some express concern about overall functionality, complexity, or feel the app is rudimentary compared to alternatives.",
+          "action": "Conduct a detailed UX audit comparing the app interface to Audible and similar competitors, focusing on reducing perceived 'clunkiness' and adding polish to core navigation flows.",
+          "confidence": "high",
+          "volume": 19,
+          "sentiment": 0.245,
+          "impact": 0.484,
+          "impactReliable": true,
+          "impactRatedN": 19,
+          "significant": false,
+          "effect": "large",
+          "ci95": [
+            -0.106,
+            0.596
+          ],
+          "nSentences": 10,
+          "verbatimIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            13,
+            16,
+            17,
+            20,
+            21,
+            22,
+            24,
+            28,
+            29,
+            30,
+            31
+          ],
+          "distribution": {
+            "positive": 6,
+            "negative": 3,
+            "neutral": 1
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Navigation and search functionality",
+          "summary": "Customers appreciate easy navigation in general, but several report that search is vague or difficult to use for finding specific titles, genres, or book sections. Some request chapter-level navigation instead of track-based grouping.",
+          "action": "Improve search filtering and auto-complete; add chapter-level navigation option; add tagging/troupe filtering for genre discovery.",
+          "confidence": "medium",
+          "volume": 3,
+          "sentiment": 0.65,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 3,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            15,
+            19,
+            26
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Bookmark management",
+          "summary": "One customer reports significant friction with the bookmark system, noting lag and the need to manually delete dozens of bookmarks when revisiting a book, and questions whether bookmarks are stored locally or in the cloud.",
+          "action": "Implement a 'delete all bookmarks' feature and optimize bookmark storage and retrieval performance; document bookmark storage architecture for user clarity.",
+          "confidence": "medium",
+          "volume": 1,
+          "sentiment": -0.267,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 1,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 3,
+          "verbatimIds": [
+            10
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 2,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Pricing and value proposition",
+          "summary": "Customers appreciate the pricing as competitive and often cheaper than Audible, with some noting savings and good value despite slightly higher per-credit costs. Free trial and free credit opportunities are mentioned positively and negatively.",
+          "action": "Audit free trial and credit redemption flows to ensure cancellation and billing processes are transparent and prevent unintended charges; highlight pricing advantage in onboarding.",
+          "confidence": "high",
+          "volume": 3,
+          "sentiment": -0.65,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 3,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 3,
+          "verbatimIds": [
+            12,
+            18,
+            23
+          ],
+          "distribution": {
+            "positive": 0,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "VIP section and membership tiers",
+          "summary": "Customers mention the VIP section, with mixed feedback: some find it good, while others note that while it has a decent number of titles, few are personally relevant to them.",
+          "action": "Review VIP tier curation and personalization; consider adding preference-based recommendations to increase relevance.",
+          "confidence": "low",
+          "volume": 2,
+          "sentiment": -0.017,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 2,
+          "significant": false,
+          "effect": "negligible",
+          "ci95": [
+            -0.514,
+            0.481
+          ],
+          "nSentences": 6,
+          "verbatimIds": [
+            8,
+            16
+          ],
+          "distribution": {
+            "positive": 2,
+            "negative": 3,
+            "neutral": 1
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        }
+      ],
+      "emotions": [
+        {
+          "label": "disappointment",
+          "count": 6,
+          "pct": 33.3,
+          "valence": "neg"
+        },
+        {
+          "label": "delight",
+          "count": 3,
+          "pct": 16.7,
+          "valence": "pos"
+        },
+        {
+          "label": "frustration",
+          "count": 3,
+          "pct": 16.7,
+          "valence": "neg"
+        },
+        {
+          "label": "indifference",
+          "count": 2,
+          "pct": 11.1,
+          "valence": "neu"
+        },
+        {
+          "label": "relief",
+          "count": 2,
+          "pct": 11.1,
+          "valence": "pos"
+        },
+        {
+          "label": "trust",
+          "count": 1,
+          "pct": 5.6,
+          "valence": "pos"
+        },
+        {
+          "label": "confusion",
+          "count": 1,
+          "pct": 5.6,
+          "valence": "neg"
+        }
+      ],
+      "valenceSplit": {
+        "pos": 33.3,
+        "neu": 11.1,
+        "neg": 55.6
+      },
+      "scatter": [
+        {
+          "r": 5,
+          "s": 0.6
+        },
+        {
+          "r": 5,
+          "s": 0.7
+        },
+        {
+          "r": 4,
+          "s": -0.017
+        },
+        {
+          "r": 3,
+          "s": -0.267
+        },
+        {
+          "r": 4,
+          "s": 0.65
+        },
+        {
+          "r": 2,
+          "s": -0.65
+        },
+        {
+          "r": 5,
+          "s": 0.7
+        },
+        {
+          "r": 2,
+          "s": -0.8
+        },
+        {
+          "r": 3,
+          "s": 0.55
+        }
+      ],
+      "painPoints": [
+        {
+          "quote": "not a good choice if your chasing your authors,not looked after",
+          "store": "Google Play",
+          "rating": 2,
+          "score": -0.8,
+          "tag": "Book selection and catalog",
+          "themeVolume": 12,
+          "themeImpact": -0.042,
+          "whyItMatters": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books."
+        },
+        {
+          "quote": "Poor library range. Expensive for 1 credit. Stick with Audible",
+          "store": "Google Play",
+          "rating": 2,
+          "score": -0.65,
+          "tag": "Book selection and catalog",
+          "themeVolume": 12,
+          "themeImpact": -0.042,
+          "whyItMatters": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books."
+        }
+      ],
+      "untagged": {
+        "count": 1,
+        "pct": 3.2,
+        "meanSentiment": null,
+        "examples": [
+          "I was able to get an audiobook I was specifically looking fo"
+        ]
+      },
+      "validation": {
+        "testable": false,
+        "note": "Only 9 rated verbatims scored; need 10+."
+      },
+      "omnibus": {
+        "testable": true,
+        "test": "Kruskal-Wallis H",
+        "h_statistic": 1.316,
+        "p_value": 0.25124,
+        "significant": false,
+        "interpretation": "No statistically detectable difference between themes — per-theme rankings below may be noise."
+      },
+      "trend": {
+        "comparable": false,
+        "note": "Not enough data spanning two 7-day periods (18 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+      }
+    },
+    "app_store": {
+      "kpis": {
+        "avgRating": 4.6,
+        "nss": 36.8,
+        "nReviews": 45,
+        "nPhrases": 19,
+        "agreement": null,
+        "agreementN": null
+      },
+      "themes": [
+        {
+          "theme": "Pricing and value proposition",
+          "summary": "Customers appreciate the pricing as competitive and often cheaper than Audible, with some noting savings and good value despite slightly higher per-credit costs. Free trial and free credit opportunities are mentioned positively and negatively.",
+          "action": "Audit free trial and credit redemption flows to ensure cancellation and billing processes are transparent and prevent unintended charges; highlight pricing advantage in onboarding.",
+          "confidence": "high",
+          "volume": 7,
+          "sentiment": -0.325,
+          "impact": -0.111,
+          "impactReliable": true,
+          "impactRatedN": 7,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 4,
+          "verbatimIds": [
+            32,
+            40,
+            41,
+            55,
+            63,
+            69,
+            73
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Playback features and controls",
+          "summary": "Customers appreciate features like adjustable playback speed, sleep timer, and the ability to skip chapters or rewind a few seconds upon resuming. Some wish for progress percentage display or easier chapter navigation.",
+          "action": "Add a visual progress bar showing percentage of book completion; ensure chapter navigation is easily accessible from playback screen.",
+          "confidence": "medium",
+          "volume": 5,
+          "sentiment": -0.01,
+          "impact": 0.0,
+          "impactReliable": true,
+          "impactRatedN": 5,
+          "significant": false,
+          "effect": "medium",
+          "ci95": [
+            -0.761,
+            0.741
+          ],
+          "nSentences": 5,
+          "verbatimIds": [
+            51,
+            55,
+            61,
+            65,
+            67
+          ],
+          "distribution": {
+            "positive": 2,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Book selection and catalog",
+          "summary": "Customers consistently praise the wide variety and good selection of audiobooks available, including both classic and new titles. Some note limitations in library range, missing titles from specific authors, or restricted availability for certain books.",
+          "action": "Audit the catalog for gaps in popular authors and series; establish partnerships or licensing agreements to expand availability in high-demand segments.",
+          "confidence": "high",
+          "volume": 10,
+          "sentiment": 0.82,
+          "impact": 0.029,
+          "impactReliable": true,
+          "impactRatedN": 10,
+          "significant": false,
+          "effect": "large",
+          "ci95": [
+            0.684,
+            0.956
+          ],
+          "nSentences": 5,
+          "verbatimIds": [
+            35,
+            36,
+            40,
+            43,
+            44,
+            45,
+            55,
+            56,
+            59,
+            71
+          ],
+          "distribution": {
+            "positive": 5,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Overall app experience",
+          "summary": "Customers frequently praise the app for being easy to use, straightforward, and helpful for their audiobook listening needs. Some express concern about overall functionality, complexity, or feel the app is rudimentary compared to alternatives.",
+          "action": "Conduct a detailed UX audit comparing the app interface to Audible and similar competitors, focusing on reducing perceived 'clunkiness' and adding polish to core navigation flows.",
+          "confidence": "high",
+          "volume": 23,
+          "sentiment": 0.1,
+          "impact": 0.055,
+          "impactReliable": true,
+          "impactRatedN": 23,
+          "significant": false,
+          "effect": "medium",
+          "ci95": [
+            -0.397,
+            0.597
+          ],
+          "nSentences": 8,
+          "verbatimIds": [
+            32,
+            37,
+            39,
+            41,
+            42,
+            44,
+            45,
+            47,
+            49,
+            50,
+            53,
+            54,
+            56,
+            57,
+            59,
+            65,
+            66,
+            68,
+            72,
+            73,
+            74,
+            75,
+            76
+          ],
+          "distribution": {
+            "positive": 4,
+            "negative": 4,
+            "neutral": 0
+          },
+          "priority": "Monitor",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Navigation and search functionality",
+          "summary": "Customers appreciate easy navigation in general, but several report that search is vague or difficult to use for finding specific titles, genres, or book sections. Some request chapter-level navigation instead of track-based grouping.",
+          "action": "Improve search filtering and auto-complete; add chapter-level navigation option; add tagging/troupe filtering for genre discovery.",
+          "confidence": "medium",
+          "volume": 3,
+          "sentiment": 0.207,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 3,
+          "significant": false,
+          "effect": "small",
+          "ci95": [
+            -0.366,
+            0.781
+          ],
+          "nSentences": 7,
+          "verbatimIds": [
+            43,
+            50,
+            65
+          ],
+          "distribution": {
+            "positive": 4,
+            "negative": 3,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Car connectivity and playback controls",
+          "summary": "Customers value the ability to connect to CarPlay and car speakers, though some experience inconsistent Bluetooth connections and note that playback speed cannot be adjusted from the car interface.",
+          "action": "Debug Bluetooth/CarPlay connection reliability; enable playback speed adjustment from car interface; test with major car models.",
+          "confidence": "high",
+          "volume": 4,
+          "sentiment": null,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 0,
+          "verbatimIds": [
+            54,
+            60,
+            62,
+            64
+          ],
+          "distribution": {
+            "positive": 0,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Audio quality and narration",
+          "summary": "Customers praise audio quality and voice narration as clear and easy to understand. No significant complaints about audio are reported.",
+          "action": "Continue to monitor audio quality standards and consider highlighting narration quality in marketing materials.",
+          "confidence": "medium",
+          "volume": 4,
+          "sentiment": 0.767,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 3,
+          "verbatimIds": [
+            34,
+            40,
+            43,
+            67
+          ],
+          "distribution": {
+            "positive": 3,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "Web and mobile synchronization",
+          "summary": "Multiple customers report that syncing between web and phone versions is unreliable or 'wonky,' creating friction when switching between devices.",
+          "action": "Audit and fix sync architecture between web and mobile apps; add user-facing sync status indicators and error messages.",
+          "confidence": "high",
+          "volume": 2,
+          "sentiment": 0.35,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 2,
+          "significant": null,
+          "effect": null,
+          "ci95": null,
+          "nSentences": 1,
+          "verbatimIds": [
+            38,
+            46
+          ],
+          "distribution": {
+            "positive": 1,
+            "negative": 0,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        },
+        {
+          "theme": "User interface clarity and design",
+          "summary": "Customers note that the interface is generally easy to use but could be more polished or intuitive. Some request a visual bookshelf feature or clearer icon meanings.",
+          "action": "Conduct a design audit of icon clarity and labeling; consider adding an optional visual bookshelf library view; benchmark UI against Audible and Libby.",
+          "confidence": "medium",
+          "volume": 4,
+          "sentiment": -0.014,
+          "impact": null,
+          "impactReliable": false,
+          "impactRatedN": 4,
+          "significant": false,
+          "effect": "large",
+          "ci95": [
+            -0.513,
+            0.484
+          ],
+          "nSentences": 7,
+          "verbatimIds": [
+            32,
+            48,
+            50,
+            65
+          ],
+          "distribution": {
+            "positive": 3,
+            "negative": 4,
+            "neutral": 0
+          },
+          "priority": "Low evidence",
+          "sourceConcentration": null
+        }
+      ],
+      "emotions": [
+        {
+          "label": "delight",
+          "count": 8,
+          "pct": 42.1,
+          "valence": "pos"
+        },
+        {
+          "label": "frustration",
+          "count": 4,
+          "pct": 21.1,
+          "valence": "neg"
+        },
+        {
+          "label": "trust",
+          "count": 3,
+          "pct": 15.8,
+          "valence": "pos"
+        },
+        {
+          "label": "relief",
+          "count": 1,
+          "pct": 5.3,
+          "valence": "pos"
+        },
+        {
+          "label": "confusion",
+          "count": 1,
+          "pct": 5.3,
+          "valence": "neg"
+        },
+        {
+          "label": "anger",
+          "count": 1,
+          "pct": 5.3,
+          "valence": "neg"
+        },
+        {
+          "label": "anxiety",
+          "count": 1,
+          "pct": 5.3,
+          "valence": "neg"
+        }
+      ],
+      "valenceSplit": {
+        "pos": 63.2,
+        "neu": 0.0,
+        "neg": 36.8
+      },
+      "scatter": [
+        {
+          "r": 3,
+          "s": -0.025
+        },
+        {
+          "r": 5,
+          "s": 0.825
+        },
+        {
+          "r": 5,
+          "s": 0.8
+        },
+        {
+          "r": 5,
+          "s": 0.867
+        },
+        {
+          "r": 4,
+          "s": 0.35
+        },
+        {
+          "r": 4,
+          "s": 0.75
+        },
+        {
+          "r": 5,
+          "s": 0.9
+        },
+        {
+          "r": 3,
+          "s": -0.01
+        },
+        {
+          "r": 1,
+          "s": -0.625
+        }
+      ],
+      "painPoints": [
+        {
+          "quote": "If you do the free trial and cancel it they will still charge you for a month even if you get confirmation of the cancellation! Just be aware!",
+          "store": "App Store",
+          "rating": 1,
+          "score": -0.62,
+          "tag": "Pricing and value proposition",
+          "themeVolume": 7,
+          "themeImpact": -0.111,
+          "whyItMatters": "Customers appreciate the pricing as competitive and often cheaper than Audible, with some noting savings and good value despite slightly higher per-credit costs. Free trial and free credit opportunities are mentioned positively and negatively."
+        }
+      ],
+      "untagged": {
+        "count": 4,
+        "pct": 8.9,
+        "meanSentiment": 0.825,
+        "examples": [
+          "I really enjoy this app. I appreciate that it can connect to"
+        ]
+      },
+      "validation": {
+        "testable": false,
+        "note": "Only 9 rated verbatims scored; need 10+."
+      },
+      "omnibus": {
+        "testable": true,
+        "test": "Kruskal-Wallis H",
+        "h_statistic": 9.26,
+        "p_value": 0.05492,
+        "significant": false,
+        "interpretation": "No statistically detectable difference between themes — per-theme rankings below may be noise."
+      },
+      "trend": {
+        "comparable": false,
+        "note": "Not enough data spanning two 7-day periods (19 recent vs 0 prior sentences; need 10+ in each). Save results from repeated runs to build a real trend line."
+      }
+    }
+  },
+  "platform": [
+    {
+      "id": "google_play",
+      "label": "Google Play",
+      "nss": -5.6,
+      "pctNegative": 50.0,
+      "pctPositive": 44.4,
+      "meanSentiment": -0.025,
+      "nReviews": 31,
+      "nPhrases": 18,
+      "avgRating": 4.48
+    },
+    {
+      "id": "app_store",
+      "label": "App Store",
+      "nss": 36.8,
+      "pctNegative": 31.6,
+      "pctPositive": 68.4,
+      "meanSentiment": 0.339,
+      "nReviews": 45,
+      "nPhrases": 19,
+      "avgRating": 4.6
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "author": "Chelsea Walker",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-02",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "good",
+      "score": 0.6,
+      "primaryEmotion": "indifference",
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "good",
+          "score": 0.6,
+          "emotion": "indifference"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": "Candace Gibbs",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-02",
+      "version": "1.0.0",
+      "engagement": null,
+      "rating": 5,
+      "text": "great",
+      "score": 0.7,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "great",
+          "score": 0.7,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "author": "Vincent Nardi",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-02",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "straight forward use. easy to use. like it alot.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "straight forward use. easy to use. like it alot.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "author": "Sierra Littke",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-02",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "overall a great app. easy to use and lots of great books to read",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "overall a great app. easy to use and lots of great books to read",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "author": "Aaron Peterson",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-02",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "it's an app with great options and just what I was looking for.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "it's an app with great options and just what I was looking for.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "author": "Gilberto",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Wonderful app, it's easy to navigate and find the audio books you are looking for with great deals as well",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Wonderful app, it's easy to navigate and find the audio books you are looking for with great deals as well",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "author": "Pattamon",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Everything works perfectly! Easy to use and good collection of books",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Everything works perfectly!",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Easy to use and good collection of books",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "author": "Christina Hart",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "1.0.0",
+      "engagement": null,
+      "rating": 4,
+      "text": "I just downloaded it and haven't been using it for long. So far it seems fine. I have noticed a couple glitches. I dont like the selection in the VIP section. It has a decent amount of books on the VIP section, but the amount I will actually read is very small. App seems straightforward though",
+      "score": -0.02,
+      "primaryEmotion": "disappointment",
+      "themes": [
+        "Overall app experience",
+        "VIP section and membership tiers"
+      ],
+      "phrases": [
+        {
+          "text": "I just downloaded it and haven't been using it for long.",
+          "score": 0.0,
+          "emotion": "indifference"
+        },
+        {
+          "text": "So far it seems fine.",
+          "score": 0.5,
+          "emotion": "relief"
+        },
+        {
+          "text": "I have noticed a couple glitches.",
+          "score": -0.3,
+          "emotion": "disappointment"
+        },
+        {
+          "text": "I dont like the selection in the VIP section.",
+          "score": -0.55,
+          "emotion": "disappointment"
+        },
+        {
+          "text": "It has a decent amount of books on the VIP section, but the amount I will actually read is very small.",
+          "score": -0.35,
+          "emotion": "disappointment"
+        },
+        {
+          "text": "App seems straightforward though",
+          "score": 0.6,
+          "emotion": "trust"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "author": "jaylene halstead",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "I was able to get an audiobook I was specifically looking for and I found 2 new authors I hadn't heard of!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [],
+      "phrases": [
+        {
+          "text": "I was able to get an audiobook I was specifically looking for and I found 2 new authors I hadn't heard of!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "author": "Chris",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 3,
+      "text": "PLEASE IMPLEMENT A \"DELETE ALL BOOKMARKS\" FEATURE. When I go to listen to a book again it is incredibly frustrating to mutually delete 40+ bookmarks on the laggy bookmark system (which could use fixing also; are they stored on the cloud or something instead of just being timestamps stored on the device??). Thank you!",
+      "score": -0.27,
+      "primaryEmotion": "frustration",
+      "themes": [
+        "Bookmark management"
+      ],
+      "phrases": [
+        {
+          "text": "PLEASE IMPLEMENT A \"DELETE ALL BOOKMARKS\" FEATURE.",
+          "score": -0.75,
+          "emotion": "frustration"
+        },
+        {
+          "text": "When I go to listen to a book again it is incredibly frustrating to mutually delete 40+ bookmarks on the laggy bookmark system (which could use fixing also; are they stored on the cloud or something instead of just being timestamps stored on the device??).",
+          "score": -0.85,
+          "emotion": "frustration"
+        },
+        {
+          "text": "Thank you!",
+          "score": 0.8,
+          "emotion": "relief"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "author": "Phakphum’s RomGirl",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-09-01",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "wide selection of audiobooks, both old and new ones.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "wide selection of audiobooks, both old and new ones.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "author": "Treasa Ni Mhaolain",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Maybe a bit more pricey than other companies, but wide selection of titles makes it a worthwhile choice.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog",
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "Maybe a bit more pricey than other companies, but wide selection of titles makes it a worthwhile choice.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "author": "judiv vanderkamp",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "A lot of options to choose from. very happy so far. Finished one book already. It was pretty good.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "A lot of options to choose from. very happy so far.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Finished one book already.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It was pretty good.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "author": "Marianna Izlandy",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "lot of choice 👌",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "lot of choice 👌",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "author": "Jessica O'Bryon",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 4,
+      "text": "great app only wish they'd list the chapters out instead of bunching them into a track",
+      "score": 0.65,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Navigation and search functionality"
+      ],
+      "phrases": [
+        {
+          "text": "great app only wish they'd list the chapters out instead of bunching them into a track",
+          "score": 0.65,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "author": "Manuel Segovia",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "The app is really easy to navigate and the VIP selection is pretty good",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog",
+        "VIP section and membership tiers"
+      ],
+      "phrases": [
+        {
+          "text": "The app is really easy to navigate and the VIP selection is pretty good",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "author": "Tess & Ben Schroeder",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-31",
+      "version": null,
+      "engagement": null,
+      "rating": 5,
+      "text": "love it",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "love it",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "author": "Ian Waddington",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-30",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 2,
+      "text": "Poor library range. Expensive for 1 credit. Stick with Audible",
+      "score": -0.65,
+      "primaryEmotion": "disappointment",
+      "themes": [
+        "Book selection and catalog",
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "Poor library range.",
+          "score": -0.65,
+          "emotion": "disappointment"
+        },
+        {
+          "text": "Expensive for 1 credit.",
+          "score": -0.6,
+          "emotion": "frustration"
+        },
+        {
+          "text": "Stick with Audible",
+          "score": -0.7,
+          "emotion": "disappointment"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "author": "Frederick Guese",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-30",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Good enough audible alternative. Wish the UI can divide by titles not tracks, but that could depend on the book.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Navigation and search functionality"
+      ],
+      "phrases": [
+        {
+          "text": "Good enough audible alternative.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Wish the UI can divide by titles not tracks, but that could depend on the book.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "author": "M",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-30",
+      "version": null,
+      "engagement": null,
+      "rating": 5,
+      "text": "great app",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "great app",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "author": "Edienic Diano",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-29",
+      "version": null,
+      "engagement": null,
+      "rating": 5,
+      "text": "great",
+      "score": 0.7,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "great",
+          "score": 0.7,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "author": "Ashley Walker",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-29",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 4,
+      "text": "Great app, especially as I'm trying to avoid using Amazon!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Great app, especially as I'm trying to avoid using Amazon!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "author": "Esther Lightening",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-29",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 4,
+      "text": "yay! a few free books!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "yay! a few free books!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "author": "T A",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-28",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Very easy to use. Great selection of books.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Very easy to use.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Great selection of books.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "author": "Mendel Lazaroff",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-28",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 4,
+      "text": "Works good. Many titles are not available in it, though.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Works good.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Many titles are not available in it, though.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "author": "Meghan Postle Campana",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-28",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 4,
+      "text": "could be better. search function is vague and it's hard to find specific troupes",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Navigation and search functionality"
+      ],
+      "phrases": [
+        {
+          "text": "could be better. search function is vague and it's hard to find specific troupes",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "author": "Graham Brown",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-28",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 2,
+      "text": "not a good choice if your chasing your authors,not looked after",
+      "score": -0.8,
+      "primaryEmotion": "disappointment",
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "not a good choice if your chasing your authors,not looked after",
+          "score": -0.8,
+          "emotion": "disappointment"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "author": "Ms C",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-28",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Fantastic. So glad I discovered Audiobooks. Thank you for such an awesome collection.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Fantastic.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "So glad I discovered Audiobooks.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Thank you for such an awesome collection.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "author": "Amanda Demoret",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-27",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "love it!!!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "love it!!!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "author": "Amy Hodge",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-27",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great app! Fully in my audio book era!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Great app!",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Fully in my audio book era!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "author": "S Story",
+      "source": "google_play",
+      "sourceLabel": "Google Play",
+      "date": "2026-08-27",
+      "version": "12.0.8",
+      "engagement": null,
+      "rating": 3,
+      "text": "a little complicated there are different levels of books and certain books arent eligible but still good",
+      "score": 0.55,
+      "primaryEmotion": "confusion",
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "a little complicated there are different levels of books and certain books arent eligible but still good",
+          "score": 0.55,
+          "emotion": "confusion"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "author": "Kelso_Warren",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-02",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 3,
+      "text": "I wanted to try out some different listening platforms because the price of Audible just keeps going up. The selection on Audiobooks is decent but I do wish the interface was more intuitive.",
+      "score": -0.03,
+      "primaryEmotion": "frustration",
+      "themes": [
+        "Overall app experience",
+        "Pricing and value proposition",
+        "User interface clarity and design"
+      ],
+      "phrases": [
+        {
+          "text": "I wanted to try out some different listening platforms because the price of Audible just keeps going up.",
+          "score": -0.4,
+          "emotion": "frustration"
+        },
+        {
+          "text": "The selection on Audiobooks is decent but I do wish the interface was more intuitive.",
+          "score": 0.35,
+          "emotion": "trust"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "author": "BookMom7",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-02",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I can listen to all my favorite oils while I work. It’s amazing",
+      "score": 0.82,
+      "primaryEmotion": "delight",
+      "themes": [],
+      "phrases": [
+        {
+          "text": "I can listen to all my favorite oils while I work.",
+          "score": 0.75,
+          "emotion": "delight"
+        },
+        {
+          "text": "It’s amazing",
+          "score": 0.9,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "author": "MiaFlores",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-02",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I listened to a book here and the voice was not fake at all, it was easy to understand and enjoy",
+      "score": 0.8,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Audio quality and narration"
+      ],
+      "phrases": [
+        {
+          "text": "I listened to a book here and the voice was not fake at all, it was easy to understand and enjoy",
+          "score": 0.8,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "author": "Tyrannusty",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-01",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Audio books is awesome. Ive found so many of my favorite reads on here. 10 out of 10 listening experiences.",
+      "score": 0.87,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Audio books is awesome.",
+          "score": 0.85,
+          "emotion": "delight"
+        },
+        {
+          "text": "Ive found so many of my favorite reads on here.",
+          "score": 0.8,
+          "emotion": "delight"
+        },
+        {
+          "text": "10 out of 10 listening experiences.",
+          "score": 0.95,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "author": "KatieNaylor2",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-01",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I really enjoyed listening on this app! Lots of great choices!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "I really enjoyed listening on this app!",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Lots of great choices!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "author": "bristy04",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-01",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Simple easy to use app with the essentials and no nonsense.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Simple easy to use app with the essentials and no nonsense.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "author": "Reagan Pugh",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-09-01",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "Syncing between web and phone are wonky - but otherwise it works.",
+      "score": 0.35,
+      "primaryEmotion": "frustration",
+      "themes": [
+        "Web and mobile synchronization"
+      ],
+      "phrases": [
+        {
+          "text": "Syncing between web and phone are wonky - but otherwise it works.",
+          "score": 0.35,
+          "emotion": "frustration"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "author": "Rossman0605",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Listened to Grant Cardone's 10x Rule. He's got some great ideas, but is a bit hard to listen to. Comes off as full of himself. App is easy to use, with marginal clicks to listen. Will be using again for more books!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Listened to Grant Cardone's 10x Rule.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "He's got some great ideas, but is a bit hard to listen to.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Comes off as full of himself.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "App is easy to use, with marginal clicks to listen.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Will be using again for more books!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "author": "AlisaS.",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Good variety of audio books, great quality audio and great pricing!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog",
+        "Pricing and value proposition",
+        "Audio quality and narration"
+      ],
+      "phrases": [
+        {
+          "text": "Good variety of audio books, great quality audio and great pricing!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "author": "Ippers101",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Such a great audiobook platform. No contracts, straightforward, reasonably priced audio books.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "Such a great audiobook platform.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "No contracts, straightforward, reasonably priced audio books.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "author": "RG-reviews",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Easy to use and flip through your collected library of audiobooks. Perfect compatibility for listening on a walk, in the car, or in bed at night.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Easy to use and flip through your collected library of audiobooks.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Perfect compatibility for listening on a walk, in the car, or in bed at night.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "author": "Leaf🍁🍂",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "Downloaded for the savings options and was able to find the books I was looking for easily! I wish there was an option to navigate by chapter/section while reading, and that it was easier to access the full book details from the playback screen, but I had no problems with the audio itself, which is the most important thing.",
+      "score": 0.75,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Book selection and catalog",
+        "Navigation and search functionality",
+        "Audio quality and narration"
+      ],
+      "phrases": [
+        {
+          "text": "Downloaded for the savings options and was able to find the books I was looking for easily!",
+          "score": 0.85,
+          "emotion": "delight"
+        },
+        {
+          "text": "I wish there was an option to navigate by chapter/section while reading, and that it was easier to access the full book details from the playback screen, but I had no problems with the audio itself, which is the most important thing.",
+          "score": 0.65,
+          "emotion": "trust"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "author": "ceced2020",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "The app is easy to use. I can usually find what I’m looking for.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "The app is easy to use.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I can usually find what I’m looking for.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "author": "dlvillela",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "The app is easy to use and navigate. There’s a good variety of books to choose from.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "The app is easy to use and navigate.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "There’s a good variety of books to choose from.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "author": "Reagan Pugh",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-31",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "Interface doesn’t sync between web and phone very well. Otherwise it does the job.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Web and mobile synchronization"
+      ],
+      "phrases": [
+        {
+          "text": "Interface doesn’t sync between web and phone very well.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Otherwise it does the job.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "author": "Ynotbyoungs2",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I downloaded the app about three weeks ago and just finished my first book. The app is great and easy to use. I sit at my desk at lunch time listening to my book. Love it!",
+      "score": 0.9,
+      "primaryEmotion": "delight",
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "I downloaded the app about three weeks ago and just finished my first book.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "The app is great and easy to use.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I sit at my desk at lunch time listening to my book.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Love it!",
+          "score": 0.9,
+          "emotion": "delight"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "author": "theo9867423954",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I just wish it had a cute maybe even interactive bookshelf.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "User interface clarity and design"
+      ],
+      "phrases": [
+        {
+          "text": "I just wish it had a cute maybe even interactive bookshelf.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "author": "Bumblebeebrie",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Easy to use and navigate",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Easy to use and navigate",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "author": "EveBitTheAppleFirst",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "As another reviewer mentioned, I want to love the app. It just feels…clunky, for lack of a better word. I won’t compare it to another popular reading app, especially the one I have in mind, but the user interface and experience are in two different worlds. It's hard to explain. It's not bad. It’s just not great.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Navigation and search functionality",
+        "User interface clarity and design"
+      ],
+      "phrases": [
+        {
+          "text": "As another reviewer mentioned, I want to love the app.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It just feels…clunky, for lack of a better word.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I won’t compare it to another popular reading app, especially the one I have in mind, but the user interface and experience are in two different worlds.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It's hard to explain.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It's not bad.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It’s just not great.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "author": "AleSirMan",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Love how easily you can move to the next chapter or go back a few.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Playback features and controls"
+      ],
+      "phrases": [
+        {
+          "text": "Love how easily you can move to the next chapter or go back a few.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "author": "sydneytadams",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "SO GOOD and plot twists gave me whip lash",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [],
+      "phrases": [
+        {
+          "text": "SO GOOD and plot twists gave me whip lash",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "author": "julian daltonn",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great app!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Great app!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "author": "PaytonP132",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "The app is easy to use and has lots of books available. It works on Apple car play but the interface isn’t great and you can’t change the speed without going on your device. Overall worth it.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Car connectivity and playback controls"
+      ],
+      "phrases": [
+        {
+          "text": "The app is easy to use and has lots of books available.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "It works on Apple car play but the interface isn’t great and you can’t change the speed without going on your device.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Overall worth it.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "author": "dancerbabyo",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-30",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I like audiobooks because it is easy to use, has a great selection and is affordable. I just wish it would tell me the percent of the book I’m finished",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog",
+        "Pricing and value proposition",
+        "Playback features and controls"
+      ],
+      "phrases": [
+        {
+          "text": "I like audiobooks because it is easy to use, has a great selection and is affordable.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I just wish it would tell me the percent of the book I’m finished",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "author": "jjablonskii",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great titles to listen to, friendly interface and overall pleasant experience",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Great titles to listen to, friendly interface and overall pleasant experience",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "author": "Kkirst7117",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great app!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Great app!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "author": "lala123!&",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Fantastic audiobook for learning another language",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [],
+      "phrases": [
+        {
+          "text": "Fantastic audiobook for learning another language",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "author": "CarrieLebel77",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I have enjoyed my subscription to audiobooks. Easy to maneuver the app and great library of audiobooks to choose from.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "I have enjoyed my subscription to audiobooks.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Easy to maneuver the app and great library of audiobooks to choose from.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "author": "Avidlistener300",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Overall, I enjoy this app and they have a great selection. Only glitch I have run into is it does not seem to link up as consistently to the Bluetooth/carplay in my car as the audible and Libby apps. I tend to have to go to the audiobooks app and click play for it to connect. A small annoyance.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Car connectivity and playback controls"
+      ],
+      "phrases": [
+        {
+          "text": "Overall, I enjoy this app and they have a great selection.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Only glitch I have run into is it does not seem to link up as consistently to the Bluetooth/carplay in my car as the audible and Libby apps.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I tend to have to go to the audiobooks app and click play for it to connect.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "A small annoyance.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "author": "Yu_Sp",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "It has all the features I need including adjustable reading speed and sleep timer. I also like how it rewinds the book just a few seconds when you resume listening",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Playback features and controls"
+      ],
+      "phrases": [
+        {
+          "text": "It has all the features I need including adjustable reading speed and sleep timer.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I also like how it rewinds the book just a few seconds when you resume listening",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "author": "Mare1989!",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great app, does have some issues when connecting to car but other wise great",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Car connectivity and playback controls"
+      ],
+      "phrases": [
+        {
+          "text": "Great app, does have some issues when connecting to car but other wise great",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "author": "acebull42",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "only issues i’ve had so far are the free credit opportunities, other than that perfect app",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "only issues i’ve had so far are the free credit opportunities, other than that perfect app",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "author": "rstarnes77",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 4,
+      "text": "I really enjoy this app. I appreciate that it can connect to my car speakers and I can listen in the car while driving.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Car connectivity and playback controls"
+      ],
+      "phrases": [
+        {
+          "text": "I really enjoy this app.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I appreciate that it can connect to my car speakers and I can listen in the car while driving.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "author": "brbada",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 3,
+      "text": "So far this app does the trick to get off of audible/amazon. But it’s really rudimentary and there are a lot of basic features that would make it more user-friendly - even just the option to find a chapter list to start from. A timer if you’re falling asleep with a book on. Clarity on what the icons mean (not very clear). I think it’ll probably continue to improve so i’m happy to keep trying it.",
+      "score": -0.01,
+      "primaryEmotion": "frustration",
+      "themes": [
+        "Overall app experience",
+        "Navigation and search functionality",
+        "Playback features and controls",
+        "User interface clarity and design"
+      ],
+      "phrases": [
+        {
+          "text": "So far this app does the trick to get off of audible/amazon.",
+          "score": 0.6,
+          "emotion": "relief"
+        },
+        {
+          "text": "But it’s really rudimentary and there are a lot of basic features that would make it more user-friendly - even just the option to find a chapter list to start from.",
+          "score": -0.5,
+          "emotion": "frustration"
+        },
+        {
+          "text": "A timer if you’re falling asleep with a book on.",
+          "score": -0.4,
+          "emotion": "frustration"
+        },
+        {
+          "text": "Clarity on what the icons mean (not very clear).",
+          "score": -0.45,
+          "emotion": "confusion"
+        },
+        {
+          "text": "I think it’ll probably continue to improve so i’m happy to keep trying it.",
+          "score": 0.7,
+          "emotion": "trust"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "author": "Goodtrips",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-29",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Great app. I'm now able to get through books that I always wanted to read but never had the time to.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Great app.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I'm now able to get through books that I always wanted to read but never had the time to.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "author": "WATA GUY",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-28",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "This was my first Audiobook and I really enjoyed it via the app.  Other than the clear audio quality I also appreciated that if you exited the app that the play position would start you back about five seconds behind where you left off and would not need to “rewind” the scroll bar to pick where you left off.  I enjoyed it and will be listening to many more.  Thanks!!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Audio quality and narration",
+        "Playback features and controls"
+      ],
+      "phrases": [
+        {
+          "text": "This was my first Audiobook and I really enjoyed it via the app.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Other than the clear audio quality I also appreciated that if you exited the app that the play position would start you back about five seconds behind where you left off and would not need to “rewind” the scroll bar to pick where you left off.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I enjoyed it and will be listening to many more.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Thanks!!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "author": "MitchLaflin",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-28",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "The app worked as intended and able to get the books I wanted.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "The app worked as intended and able to get the books I wanted.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "author": "sfd1117",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-28",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 1,
+      "text": "If you do the free trial and cancel it they will still charge you for a month even if you get confirmation of the cancellation! Just be aware!",
+      "score": -0.62,
+      "primaryEmotion": "anger",
+      "themes": [
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "If you do the free trial and cancel it they will still charge you for a month even if you get confirmation of the cancellation!",
+          "score": -0.95,
+          "emotion": "anger"
+        },
+        {
+          "text": "Just be aware!",
+          "score": -0.3,
+          "emotion": "anxiety"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "author": "LG Top Notch",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-28",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "At first I thought the plot line was weak but the longer you listened the more interesting and good it got. Kept my interest and ended up really liking the book",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [],
+      "phrases": [
+        {
+          "text": "At first I thought the plot line was weak but the longer you listened the more interesting and good it got.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "Kept my interest and ended up really liking the book",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "author": "BessM321",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Love this app so much. There are so many great options to choose from.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Book selection and catalog"
+      ],
+      "phrases": [
+        {
+          "text": "Love this app so much.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "There are so many great options to choose from.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "author": "Olevine",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Perfect for listening to audiobooks",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Perfect for listening to audiobooks",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "author": "Erica.timothy531",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Just as good as the other popular audiobook app but a cheaper price!!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience",
+        "Pricing and value proposition"
+      ],
+      "phrases": [
+        {
+          "text": "Just as good as the other popular audiobook app but a cheaper price!!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "author": "Jelly14!",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I stopped using audible and got this app instead and I love it. I’ve already recommended it to 3 other friends",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "I stopped using audible and got this app instead and I love it.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "I’ve already recommended it to 3 other friends",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "author": "Tristennn",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "I like the layout, I honestly found it easier to navigate than audible right off the bat which I really appreciated. And I think the sign up bonus is one of the best you can be offered.",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "I like the layout, I honestly found it easier to navigate than audible right off the bat which I really appreciated.",
+          "score": null,
+          "emotion": null
+        },
+        {
+          "text": "And I think the sign up bonus is one of the best you can be offered.",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "author": "woahitsshadow",
+      "source": "app_store",
+      "sourceLabel": "App Store",
+      "date": "2026-08-27",
+      "version": "12.1.1",
+      "engagement": null,
+      "rating": 5,
+      "text": "Love everything about Audiobooks.com!",
+      "score": null,
+      "primaryEmotion": null,
+      "themes": [
+        "Overall app experience"
+      ],
+      "phrases": [
+        {
+          "text": "Love everything about Audiobooks.com!",
+          "score": null,
+          "emotion": null
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Sentences from the same verbatim are not independent observations; clustering inflates apparent significance.",
+    "Themes can overlap (a verbatim may belong to several), so groups aren't mutually exclusive as most tests assume.",
+    "Sentiment scores are LLM judgments, not a validated instrument; treat them as a consistent proxy, not ground truth.",
+    "Source data is a convenience sample (whoever chose to post), not a random sample of customers.",
+    "Only 37 sentences — confidence intervals will be wide and rankings unstable between runs.",
+    "11 themes tested; Bonferroni correction applied, which is conservative and may hide real effects."
+  ],
+  "summary": null,
+  "nextSteps": [
+    {
+      "title": "Conduct a detailed UX audit comparing the app interface to Audible and similar competitors, focusing on reducing perceived 'clunkiness' and adding polish to core navigation flows.",
+      "rationale": "Largest theme by volume (42 mentions) but not statistically significant — mixed sentiment means a targeted fix, not a redesign."
+    }
+  ],
+  "narrative": null,
+  "companySlug": "storytel",
+  "resolution": {
+    "mode": "discovered",
+    "confidence": 100.0,
+    "iosAppId": "521227008",
+    "androidAppId": "com.audiobooks.androidapp"
+  },
+  "analysisProgress": {
+    "stage": "complete",
+    "isPartial": false,
+    "processedReviews": 76,
+    "totalReviews": 76
+  }
+}
