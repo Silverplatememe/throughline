@@ -893,7 +893,7 @@ function WeeklyPulse({ weeks = [], activeWeek, onSelectWeek }) {
   if (!weeks.length) return null;
   // Use almost the whole card. The earlier fixed-width columns made a
   // full-width component feel like a small chart inside a large empty canvas.
-  const width = 1040, top = 48, bottom = 278, left = 28, right = 1012;
+  const width = 1600, chartHeight = 380, top = 48, bottom = 322, left = 34, right = 1566;
   const maxReviews = Math.max(1, ...weeks.map((w) => Number(w.nReviews) || 0));
   const baseConfig = {
     sentiment: { label: "Net sentiment", color: "#E85D4A", value: (w) => w.nss, floor: -100, ceiling: 100, format: (v) => fmt(v, 1) },
@@ -918,7 +918,8 @@ function WeeklyPulse({ weeks = [], activeWeek, onSelectWeek }) {
     return left + (plotWidth * i) / (validWeeks.length - 1);
   });
   const pointSpacing = validWeeks.length > 1 ? Math.min(...xs.slice(1).map((x, i) => x - xs[i])) : plotWidth;
-  const barWidth = Math.max(96, Math.min(174, pointSpacing * .52));
+  const barWidth = Math.max(120, Math.min(220, pointSpacing * .46));
+  const contextBarWidth = Math.max(64, Math.min(110, barWidth * .55));
   const y = (value) => bottom - ((Number(value) - config.min) / Math.max(1, config.max - config.min)) * (bottom - top);
   const points = validWeeks.map((row, i) => ({ x: xs[i], y: y(row.value), value: row.value, week: row.week, originalIndex: row.originalIndex }));
   const linePath = points.map((p, i) => `${i ? "L" : "M"}${p.x},${p.y}`).join(" ");
@@ -945,25 +946,26 @@ function WeeklyPulse({ weeks = [], activeWeek, onSelectWeek }) {
           <div className="tl-chart-controls" role="group" aria-label="Chart measure"><span>Measure</span><div>{[["sentiment","Sentiment"],["rating","Rating"],["reviews","Review volume"]].map(([id,label]) => <button key={id} onClick={() => setFocus(id)} aria-pressed={focus===id} className={focus===id ? "is-active" : ""}>{label}</button>)}</div></div>
           {sparse && latestPoint && <div className="tl-latest-movement"><span>{previousPoint ? "Latest movement" : "Latest week"}</span><strong>{previousPoint ? `${config.format(previousPoint.value)} → ` : ""}{config.format(latestPoint.value)}</strong><small>{latestDelta == null ? `${latestPoint.week.nReviews} reviews · no prior week to compare` : `${latestDelta > 0 ? "Improved" : latestDelta < 0 ? "Declined" : "Unchanged"} ${Math.abs(latestDelta).toFixed(focus === "rating" ? 2 : 1)}${focus === "sentiment" ? " points" : ""} · ${latestPoint.week.nReviews} reviews`}</small></div>}
         </div>
-        <svg viewBox={`0 0 ${width} 330`} className={`${sparse ? "mt-12 h-[285px]" : "mt-12 h-[310px]"} w-full overflow-visible`} role="img" aria-label={`${config.label} across weekly periods`}>
+        <svg viewBox={`0 0 ${width} ${chartHeight}`} className="mt-12 block h-auto w-full overflow-visible" role="img" aria-label={`${config.label} across weekly periods`}>
           <defs><linearGradient id={`weekly-area-${focus}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={config.color} stopOpacity=".16"/><stop offset="1" stopColor={config.color} stopOpacity="0"/></linearGradient></defs>
           {[top, (top+bottom)/2, bottom].map((gy) => <line key={gy} x1={left} x2={right} y1={gy} y2={gy} stroke="#E8E1DD" />)}
           <text x="16" y="19" fill="#8A7F79" fontSize="10" fontWeight="600">{config.label}</text>
           {focus === "sentiment" && domainMin <= 0 && domainMax >= 0 && <><line x1={left} x2={right} y1={y(0)} y2={y(0)} stroke="#CFC5BF" strokeDasharray="4 5"/><text x="45" y={y(0)+4} fill="#9A8F89" fontSize="9">0</text></>}
           {points.map((p, i) => {
-            const contextualHeight = Math.max(8, (Number(p.week.nReviews || 0) / maxReviews) * 138);
+            const contextualHeight = Math.max(6, (Number(p.week.nReviews || 0) / maxReviews) * 78);
             const primaryY = y(p.value);
             const primaryHeight = Math.max(8, bottom - primaryY);
-            return <rect key={`volume-${p.week.start}`} x={p.x-barWidth/2} y={focus === "reviews" ? primaryY : bottom-contextualHeight} width={barWidth} height={focus === "reviews" ? primaryHeight : contextualHeight} rx="8" fill={focus === "reviews" ? config.color : "#CFD9E2"} opacity={focus === "reviews" ? ".88" : ".5"} className="tl-week-volume" style={{ animationDelay: `${i * 85}ms` }} />;
+            const renderedWidth = focus === "reviews" ? barWidth : contextBarWidth;
+            return <rect key={`volume-${p.week.start}`} x={p.x-renderedWidth/2} y={focus === "reviews" ? primaryY : bottom-contextualHeight} width={renderedWidth} height={focus === "reviews" ? primaryHeight : contextualHeight} rx="8" fill={focus === "reviews" ? config.color : "#C9D4DE"} opacity={focus === "reviews" ? ".9" : ".24"} className="tl-week-volume" style={{ animationDelay: `${i * 85}ms` }} />;
           })}
-          {(hoveredPoint || (activeWeek != null && points.find((p)=>p.originalIndex===activeWeek))) && (() => { const hp = hoveredPoint || points.find((p)=>p.originalIndex===activeWeek); return <rect x={Math.max(left-6,hp.x-barWidth/2-14)} y="28" width={barWidth+28} height="278" rx="12" fill="#F6F1EE" opacity={hoveredPoint ? ".82" : ".58"} />; })()}
+          {(hoveredPoint || (activeWeek != null && points.find((p)=>p.originalIndex===activeWeek))) && (() => { const hp = hoveredPoint || points.find((p)=>p.originalIndex===activeWeek); return <rect x={Math.max(left-6,hp.x-barWidth/2-14)} y="28" width={barWidth+28} height="326" rx="12" fill="#F6F1EE" opacity={hoveredPoint ? ".82" : ".58"} />; })()}
           {!sparse && focus !== "reviews" && areaPath && <path key={`area-${focus}`} d={areaPath} fill={`url(#weekly-area-${focus})`} className="tl-week-area" />}
           {focus !== "reviews" && validWeeks.length > 1 && linePath && <path key={focus} d={linePath} fill="none" stroke={config.color} strokeWidth={sparse ? "3.5" : "3"} strokeLinecap="round" strokeLinejoin="round" className="tl-week-rating-line" />}
           {points.map((p) => <g key={`${focus}-${p.week.start}`} className="cursor-pointer" onMouseEnter={() => setHoveredWeek(p.originalIndex)} onMouseLeave={() => setHoveredWeek(null)} onFocus={() => setHoveredWeek(p.originalIndex)} onBlur={() => setHoveredWeek(null)} onClick={() => onSelectWeek?.(activeWeek === p.originalIndex ? null : p.originalIndex)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelectWeek?.(activeWeek === p.originalIndex ? null : p.originalIndex); } }} role="button" tabIndex="0" aria-label={`${p.week.label}: ${p.week.nReviews} reviews, ${p.week.avgRating ?? "no rating"} stars, net sentiment ${p.week.nss ?? "unavailable"}`}>
-            <rect x={p.x-Math.max(90,barWidth/2)} y="18" width={Math.max(180,barWidth)} height="294" fill="transparent" />
+            <rect x={p.x-Math.max(100,barWidth/2)} y="18" width={Math.max(200,barWidth)} height="344" fill="transparent" />
             {focus !== "reviews" && <circle cx={p.x} cy={p.y} r={active === p.originalIndex ? 7 : 5.5} fill="#FFFDFC" stroke={config.color} strokeWidth={active === p.originalIndex ? 3 : 2} className="tl-week-point" />}
             <text x={p.x} y={Math.max(25,p.y-14)} textAnchor="middle" fill="#172033" fontSize="12" fontWeight="750">{config.format(p.value)}</text>
-            <text x={p.x} y="314" textAnchor="middle" fill={active === p.originalIndex ? "#172033" : "#7F746E"} fontSize="12" fontWeight={active === p.originalIndex ? "700" : "600"}>{p.week.label}</text>
+            <text x={p.x} y="363" textAnchor="middle" fill={active === p.originalIndex ? "#172033" : "#7F746E"} fontSize="13" fontWeight={active === p.originalIndex ? "700" : "600"}>{p.week.label}</text>
           </g>)}
           {hoveredPoint && <g className="tl-chart-tooltip" pointerEvents="none" transform={`translate(${hoverX} ${hoverY})`}>
             <polygon points={hoverAbove ? `${hoverCaretX-6},57 ${hoverCaretX+6},57 ${hoverCaretX},66` : `${hoverCaretX-6},1 ${hoverCaretX+6},1 ${hoverCaretX},-8`} fill="#172033" />
@@ -973,7 +975,7 @@ function WeeklyPulse({ weeks = [], activeWeek, onSelectWeek }) {
             <text x="91" y="41" fill="#DCE2EA" fontSize="10.5">{hoveredPoint.week.avgRating == null ? "Rating —" : `${Number(hoveredPoint.week.avgRating).toFixed(2)}★`}</text>
             <text x="170" y="41" fill="#DCE2EA" fontSize="10.5">{hoveredPoint.week.nss == null ? "NSS —" : `NSS ${fmt(hoveredPoint.week.nss, 1)}`}</text>
           </g>}
-          {!sparse && focus === "sentiment" && reversal && Math.abs(reversal.delta) >= 35 && points.find((p)=>p.originalIndex===reversal.index) && (() => { const rx = points.find((p)=>p.originalIndex===reversal.index).x; return <g className="tl-shift-callout"><rect x={Math.min(870,Math.max(75,rx-64))} y="3" width="128" height="20" rx="10" fill="#FFF1EC"/><text x={Math.min(934,Math.max(139,rx))} y="17" textAnchor="middle" fill="#B74C35" fontSize="9.5" fontWeight="700">Sharp sentiment shift</text></g>; })()}
+          {!sparse && focus === "sentiment" && reversal && Math.abs(reversal.delta) >= 35 && points.find((p)=>p.originalIndex===reversal.index) && (() => { const rx = points.find((p)=>p.originalIndex===reversal.index).x; const calloutX = Math.min(width-164, Math.max(left+8, rx-64)); return <g className="tl-shift-callout"><rect x={calloutX} y="3" width="128" height="20" rx="10" fill="#FFF1EC"/><text x={calloutX+64} y="17" textAnchor="middle" fill="#B74C35" fontSize="9.5" fontWeight="700">Sharp sentiment shift</text></g>; })()}
         </svg>
         {activeWeek != null && <div className="flex items-center justify-between border-t border-[#EEE9E5] px-2 py-2 text-xs"><span className="font-semibold text-[#172033]">Filtering the dashboard to {weeks[activeWeek].label}</span><button onClick={() => onSelectWeek?.(null)} className="font-semibold text-[#C85D42] hover:underline">Clear week filter</button></div>}
       </div>
